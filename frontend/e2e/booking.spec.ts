@@ -1,0 +1,37 @@
+import { test, expect } from '@playwright/test';
+
+test('guest compares live fares and saves a simulated cash booking', async ({ page, request }) => {
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+  await page.goto('/');
+  const entry = page.waitForResponse(response => response.url().endsWith('/api/v1/identity/enter') && response.request().method() === 'POST');
+  await page.getByRole('button', {name: 'Continue as guest'}).click();
+  const session = await (await entry).json();
+  await page.getByRole('button', {name: 'Go to Home'}).click();
+  await page.getByLabel('Search Hyderabad').fill('RGIA');
+  await page.getByRole('button', {name: /Rajiv Gandhi International Airport/}).click();
+  const quoteResponse = page.waitForResponse(response => response.url().endsWith('/api/v1/booking/quotes') && response.request().method() === 'POST');
+  await page.getByRole('button', {name: 'Compare rides'}).click();
+  const quote = await (await quoteResponse).json();
+  expect(quote.vehicles).toHaveLength(7);
+  await expect(page.getByText(`${quote.distance_km.toFixed(2)} km`)).toBeVisible();
+  await page.getByRole('radio', {name: /UberXL/}).check();
+  await page.getByLabel('Payment method').selectOption('cash');
+  const bookingResponse = page.waitForResponse(response => response.url().endsWith('/api/v1/booking/rides') && response.request().method() === 'POST');
+  await page.getByRole('button', {name: /Confirm simulated booking/}).click();
+  await expect(page.getByText('Processing simulated booking…')).toBeVisible();
+  const saved = await bookingResponse;
+  expect(saved.status()).toBe(201);
+  const ride = await saved.json();
+  await expect(page.getByRole('heading', {name: 'Your Ride is Confirmed!'})).toBeVisible();
+  await expect(page.getByText(/Cash is due at destination in this simulation/)).toBeVisible();
+  await expect(page.getByText(`₹${ride.vehicle.fare.toFixed(2)}`)).toBeVisible();
+  const persisted = await request.get(`/api/v1/booking/rides/${ride.id}`, {headers: {Authorization: `Bearer ${session.token}`}});
+  expect(persisted.status()).toBe(200);
+  expect(await persisted.json()).toEqual(ride);
+  expect((await request.get(`/api/v1/booking/rides/${ride.id}`)).status()).toBe(401);
+  await page.getByRole('button', {name: 'Track Your Ride'}).click();
+  await expect(page.getByText(/Tracking is not available yet/)).toBeVisible();
+  expect(errors).toEqual([]);
+});

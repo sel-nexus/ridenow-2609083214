@@ -8,6 +8,7 @@ from pymongo import AsyncMongoClient
 
 from app.identity import router
 from app.locations import router as locations_router
+from app.booking import router as booking_router
 
 
 class Settings(BaseSettings):
@@ -32,6 +33,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             await app.state.db.sessions.create_index("expires_at", expireAfterSeconds=0)
             await app.state.db.challenges.create_index("expires_at", expireAfterSeconds=0)
             await app.state.db.saved_locations.create_index([('owner', 1), ('label_key', 1)], unique=True)
+            await app.state.db.bookings.create_index('quote_id', unique=True)
             yield
         finally:
             await client.close()
@@ -40,6 +42,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.add_middleware(CORSMiddleware, allow_origins=[s.strip() for s in config.cors_origins.split(",") if s.strip()], allow_methods=["*"], allow_headers=["*"], allow_credentials=False)
     app.include_router(router)
     app.include_router(locations_router)
+    app.include_router(booking_router)
 
     @app.get("/api/health")
     async def health() -> dict[str, str]:

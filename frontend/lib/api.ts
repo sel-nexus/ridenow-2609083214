@@ -3,6 +3,9 @@ export type Session = { token: string; profile: Profile };
 export type Location = { name: string; lat: number; lng: number };
 export type SavedPlace = Location & { id: string; label: string };
 export type LocationPage<T> = { items: T[]; total: number };
+export type VehicleQuote = { id: string; name: string; seats: number | null; tier_fee: number; eta_minutes: number; base_fare: number; original_fare: number; fare: number };
+export type Quote = { id: string; pickup: Location; destination: Location; distance_km: number; surge_multiplier: number; vehicles: VehicleQuote[] };
+export type RideBooking = { id: string; quote_id: string; pickup: Location; destination: Location; distance_km: number; surge_multiplier: number; vehicle: VehicleQuote; payment: string; status: string; created_at: string };
 
 /** Call the same-origin Next proxy and surface safe API errors. */
 export async function api<T>(path: string, options: RequestInit = {}, token?: string, namespace = 'identity'): Promise<T> {

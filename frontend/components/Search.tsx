@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
 import { api, type Location, type LocationPage, type SavedPlace } from '../lib/api';
+import Booking from './Booking';
 
 const Map = dynamic(() => import('./Map'), { ssr: false, loading: () => <p role="status">Loading map…</p> });
 const defaults: Record<string, Location> = {
@@ -18,6 +19,7 @@ export default function Search({ token, onAccount }: { token: string; onAccount:
   const [saved, setSaved] = useState<SavedPlace[]>([]);
   const [recent, setRecent] = useState<Location[]>([]);
   const [selected, setSelected] = useState<Location | null>(null);
+  const [bookingDestination, setBookingDestination] = useState<Location | null>(null);
   const [label, setLabel] = useState('Home');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -80,7 +82,7 @@ export default function Search({ token, onAccount }: { token: string; onAccount:
   return <main className="home-shell">
     <header className="home-header"><span className="brand">RideNow<span className="brand-dot">.</span></span><span>HYDERABAD</span><button onClick={onAccount}>Account &amp; profile</button></header>
     <Map location={selected} onSelect={select} />
-    <section className="search-panel" aria-labelledby="where-title">
+    {bookingDestination ? <div className="search-panel"><Booking token={token} destination={bookingDestination} onBack={() => setBookingDestination(null)} /></div> : <section className="search-panel" aria-labelledby="where-title">
       <div className="card-kicker">YOUR CITY, IN MOTION</div><h1 id="where-title">Where to?</h1>
       <label htmlFor="destination">Search Hyderabad</label><input id="destination" autoComplete="off" placeholder="Search a place or landmark" value={query} onChange={e => setQuery(e.target.value)} />
       {loading && <p role="status">Searching locations…</p>}
@@ -89,11 +91,11 @@ export default function Search({ token, onAccount }: { token: string; onAccount:
       {!loading && !error && <div className="place-list" aria-label="Search results">{results.map(place => <button key={place.name} onClick={() => select(place)}>{place.name}<span>↗</span></button>)}</div>}
       <h2>Popular hotspots</h2><div className="hotspots">{['RGIA', 'Secunderabad Railway Station', 'Inorbit Mall', 'Mindspace'].map(term => <button key={term} onClick={() => setQuery(term)}>{term}</button>)}</div>
       <p className="map-help">Click the map or drag the destination pin to choose a custom point. The blue dot is your simulated pickup.</p>
-      {selected && <div className="selection"><strong>Selected destination</strong><p>{selected.name}</p><small>{selected.lat.toFixed(5)}, {selected.lng.toFixed(5)}</small><label htmlFor="place-label">Save as</label><input id="place-label" maxLength={40} value={label} onChange={e => setLabel(e.target.value)} /><button className="primary" disabled={saving || !label.trim()} onClick={() => void save()}>{saving ? 'Saving…' : 'Save place'}</button></div>}
+      {selected && <div className="selection"><strong>Selected destination</strong><p>{selected.name}</p><small>{selected.lat.toFixed(5)}, {selected.lng.toFixed(5)}</small><button className="primary" onClick={() => setBookingDestination(selected)}>Compare rides</button><label htmlFor="place-label">Save as</label><input id="place-label" maxLength={40} value={label} onChange={e => setLabel(e.target.value)} /><button className="primary" disabled={saving || !label.trim()} onClick={() => void save()}>{saving ? 'Saving…' : 'Save place'}</button></div>}
       {notice && <p role="status">{notice}</p>}{savedError && <div role="alert">{savedError} <button onClick={() => setRetry(value => value + 1)}>Retry loading places</button></div>}
       <h2>Saved places</h2><div className="saved-list">{Object.entries(defaults).filter(([name]) => !saved.some(item => item.label.toLowerCase() === name.toLowerCase())).map(([name, place]) => <button key={name} onClick={() => select(place)}>{name} <span>{place.name} · suggested</span></button>)}{saved.map(place => <div key={place.id}><button onClick={() => select(place)}>{place.label}<span>{place.name}</span></button><button disabled={saving} aria-label={`Remove ${place.label}`} onClick={() => void remove(place)}>Remove</button></div>)}</div>
       {recent.length > 0 && <><h2>Recent searches</h2><div className="place-list">{recent.map(place => <button key={place.name} onClick={() => select(place)}>{place.name}</button>)}</div></>}
-      <p className="small">Map vehicles and pickup are simulated. Booking is not yet available.</p>
-    </section>
+      <p className="small">Map vehicles, pickup and booking are simulated.</p>
+    </section>}
   </main>;
 }
