@@ -9,6 +9,7 @@ from fastapi.security import HTTPAuthorizationCredentials
 from pydantic import BaseModel, ConfigDict, EmailStr, Field, field_validator
 
 from app.core import IdentityRepository, bearer, current_user, database
+from app.text_policy import validate_plain_text
 
 router = APIRouter(prefix="/api/v1/identity", tags=["identity"])
 
@@ -34,12 +35,21 @@ class FastEntry(BaseModel):
 
 class ProfileUpdate(BaseModel):
     """Validate editable personal details without accepting owner identifiers."""
-    model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
+    model_config = ConfigDict(extra="forbid")
     first_name: str = Field(min_length=1, max_length=60)
     last_name: str = Field(default="", max_length=60)
     phone: str = Field(default="", max_length=16)
     email: EmailStr | Literal[""] = ""
     photo: str = Field(default="", max_length=200000)
+
+    @field_validator("first_name", "last_name")
+    @classmethod
+    def check_name(cls, value: str) -> str:
+        """Reject markup, controls and a blank required first name."""
+        validate_plain_text(value)
+        if not value.strip() and value:
+            raise ValueError("Name must not be blank")
+        return value
 
     @field_validator("phone")
     @classmethod

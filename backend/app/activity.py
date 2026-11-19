@@ -1,12 +1,14 @@
 """Owner-scoped history, simulated credits, feedback and reservations."""
+import secrets
 from datetime import datetime, timezone
 from typing import Annotated, Literal
 
+from bson import ObjectId
 from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 from pymongo import ReturnDocument
 
-from app.booking import BookingRepository, QuoteInput, Vehicle, object_id, public_booking, public_quote
+from app.booking import QuoteInput, Vehicle, object_id, public_booking, public_quote
 from app.core import current_user, database
 
 router = APIRouter(prefix='/api/v1/activity', tags=['activity'])
@@ -44,6 +46,13 @@ class Schedule(QuoteInput):
 def public_schedule(doc: dict) -> dict:
     """Serialize a reservation without disclosing its owner."""
     return {'id': str(doc['_id']), 'kind': doc['kind'], 'scheduled_at': doc['scheduled_at'].replace(tzinfo=timezone.utc).isoformat(), 'pickup': doc['pickup'], 'destination': doc['destination'], 'vehicle': doc['vehicle'], 'distance_km': doc['distance_km'], 'surge_multiplier': doc['surge_multiplier'], 'status': doc['status']}
+
+
+def schedule_estimate(payload: Schedule) -> dict:
+    """Calculate a reservation estimate without creating a standalone quote."""
+    return public_quote({'_id': ObjectId(), 'pickup': payload.pickup.model_dump(),
+                         'destination': payload.destination.model_dump(),
+                         'surge': secrets.randbelow(3) == 0})
 
 
 class ActivityRepository:
@@ -126,7 +135,7 @@ async def schedules(request: Request, user: Annotated[dict, Depends(current_user
 async def create_schedule(payload: Schedule, request: Request, user: Annotated[dict, Depends(current_user)]) -> dict:
     """Save an estimate without dispatch, payment, or an invented hourly tariff."""
     db = database(request)
-    quote = public_quote(await BookingRepository(db).create_quote(user['_id'], QuoteInput(pickup=payload.pickup, destination=payload.destination)))
+    quote = schedule_estimate(payload)
     doc = {'owner': user['_id'], 'kind': payload.kind, 'scheduled_at': payload.scheduled_at, 'pickup': quote['pickup'], 'destination': quote['destination'], 'vehicle': next(v for v in quote['vehicles'] if v['id'] == payload.vehicle), 'distance_km': quote['distance_km'], 'surge_multiplier': quote['surge_multiplier'], 'status': 'scheduled'}
     result = await db.schedules.insert_one(doc)
     doc['_id'] = result.inserted_id
@@ -141,7 +150,7 @@ async def edit_schedule(schedule_id: str, payload: Schedule, request: Request, u
     existing = await db.schedules.find_one({'_id': object_id(schedule_id), 'owner': user['_id']})
     if not existing:
         raise HTTPException(404, 'Reservation not found')
-    quote = public_quote(await BookingRepository(db).create_quote(user['_id'], QuoteInput(pickup=payload.pickup, destination=payload.destination)))
+    quote = schedule_estimate(payload)
     fields = {'kind': payload.kind, 'scheduled_at': payload.scheduled_at, 'pickup': quote['pickup'], 'destination': quote['destination'], 'vehicle': next(v for v in quote['vehicles'] if v['id'] == payload.vehicle), 'distance_km': quote['distance_km'], 'surge_multiplier': quote['surge_multiplier']}
     return public_schedule(await repo.schedule(schedule_id, fields))
 

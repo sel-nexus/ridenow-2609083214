@@ -1,6 +1,420 @@
 {
   "nodes": [
     {
+      "id": "backend_app_activity",
+      "label": "activity.py",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_feedback_c8d767",
+      "label": "Feedback",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L15",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_py_basemodel",
+      "label": "BaseModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_funds",
+      "label": "Funds",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L23",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_schedule",
+      "label": "Schedule",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L29",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_py_field_validator",
+      "label": "field_validator",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_schedule_future_time",
+      "label": ".future_time()",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L37",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "datetime",
+      "label": "datetime",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_public_schedule",
+      "label": "public_schedule()",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L44",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_activityrepository",
+      "label": "ActivityRepository",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L49",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_activityrepository_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L51",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_activityrepository_completed",
+      "label": ".completed()",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L55",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_activityrepository_schedule",
+      "label": ".schedule()",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L62",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_py_get",
+      "label": "get",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_history",
+      "label": "history()",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L74",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_py_request",
+      "label": "Request",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_py_depends",
+      "label": "Depends",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_py_query",
+      "label": "Query",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_py_ge",
+      "label": "ge",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_py_le",
+      "label": "le",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_receipt",
+      "label": "receipt()",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L83",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_py_put",
+      "label": "put",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_feedback_ef15f4",
+      "label": "feedback()",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L91",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_wallet",
+      "label": "wallet()",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L102",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_py_post",
+      "label": "post",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_add_funds",
+      "label": "add_funds()",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L108",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_schedules",
+      "label": "schedules()",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L117",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_create_schedule",
+      "label": "create_schedule()",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L126",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_edit_schedule",
+      "label": "edit_schedule()",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L137",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_cancel_schedule",
+      "label": "cancel_schedule()",
+      "file_type": "code",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L150",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_1",
+      "label": "Owner-scoped history, simulated credits, feedback and reservations.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_16",
+      "label": "Validate simulated feedback without collecting payment details.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L16",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_24",
+      "label": "Validate a positive amount of simulated credits in paise.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L24",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_30",
+      "label": "Capture a future simulated reservation with a route estimate.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L30",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_38",
+      "label": "Require an unambiguous future instant.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L38",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_45",
+      "label": "Serialize a reservation without disclosing its owner.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L45",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_50",
+      "label": "Read and mutate persisted activity within a rider's scope.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L50",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_52",
+      "label": "Use the application pool and authenticated owner.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L52",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_56",
+      "label": "Return an owned completed booking or a non-disclosing error.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L56",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_63",
+      "label": "Change a future reservation atomically, never a terminal one.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L63",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_75",
+      "label": "List completed journeys in reverse creation order.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L75",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_84",
+      "label": "Return the original fare snapshot, not a newly calculated quote.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L84",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_92",
+      "label": "Save feedback only on an owned completed journey.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L92",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_103",
+      "label": "Read simulated credits from the authenticated profile.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L103",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_109",
+      "label": "Increment credits atomically; no real payment occurs.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L109",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_118",
+      "label": "List only future scheduled reservations, with a matching total.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L118",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_127",
+      "label": "Save an estimate without dispatch, payment, or an invented hourly tariff.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L127",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_138",
+      "label": "Update a future reservation and refresh its simulated estimate.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L138",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_activity_rationale_151",
+      "label": "Cancel a future reservation without charging a fee.",
+      "file_type": "rationale",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L151",
+      "_origin": "ast"
+    },
+    {
       "id": "backend_app_booking",
       "label": "booking.py",
       "file_type": "code",
@@ -774,13 +1188,12 @@
       "community": 8
     },
     {
-      "id": "field_validator",
+      "id": "backend_app_identity_py_field_validator",
       "label": "field_validator",
       "file_type": "code",
       "source_file": "",
       "source_location": "",
-      "_origin": "ast",
-      "community": 8
+      "_origin": "ast"
     },
     {
       "id": "backend_app_identity_profileupdate_check_phone",
@@ -1232,7 +1645,7 @@
       "_origin": "ast"
     },
     {
-      "id": "query",
+      "id": "backend_app_locations_py_query",
       "label": "Query",
       "file_type": "code",
       "source_file": "",
@@ -1248,7 +1661,7 @@
       "_origin": "ast"
     },
     {
-      "id": "ge",
+      "id": "backend_app_locations_py_ge",
       "label": "ge",
       "file_type": "code",
       "source_file": "",
@@ -1256,7 +1669,7 @@
       "_origin": "ast"
     },
     {
-      "id": "le",
+      "id": "backend_app_locations_py_le",
       "label": "le",
       "file_type": "code",
       "source_file": "",
@@ -1440,7 +1853,7 @@
       "label": "Settings",
       "file_type": "code",
       "source_file": "backend/app/main.py",
-      "source_location": "L15",
+      "source_location": "L16",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
@@ -1460,7 +1873,7 @@
       "label": "create_app()",
       "file_type": "code",
       "source_file": "backend/app/main.py",
-      "source_location": "L23",
+      "source_location": "L24",
       "_callable": true,
       "_origin": "ast",
       "community": 1
@@ -1479,7 +1892,7 @@
       "label": "lifespan()",
       "file_type": "code",
       "source_file": "backend/app/main.py",
-      "source_location": "L28",
+      "source_location": "L29",
       "_callable": true,
       "_origin": "ast",
       "community": 1
@@ -1489,7 +1902,7 @@
       "label": "health()",
       "file_type": "code",
       "source_file": "backend/app/main.py",
-      "source_location": "L50",
+      "source_location": "L54",
       "_callable": true,
       "_origin": "ast",
       "community": 1
@@ -1504,19 +1917,19 @@
       "community": 1
     },
     {
-      "id": "backend_app_main_rationale_16",
+      "id": "backend_app_main_rationale_17",
       "label": "Read deployment settings from environment or the local env file.",
       "file_type": "rationale",
       "source_file": "backend/app/main.py",
-      "source_location": "L16",
+      "source_location": "L17",
       "_origin": "ast"
     },
     {
-      "id": "backend_app_main_rationale_24",
+      "id": "backend_app_main_rationale_25",
       "label": "Create an app with a single lifecycle-bound asynchronous Mongo client.",
       "file_type": "rationale",
       "source_file": "backend/app/main.py",
-      "source_location": "L24",
+      "source_location": "L25",
       "_origin": "ast"
     },
     {
@@ -1822,6 +2235,150 @@
       "file_type": "rationale",
       "source_file": "backend/app/tracking.py",
       "source_location": "L161",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity",
+      "label": "test_activity.py",
+      "file_type": "code",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_py_fixture",
+      "label": "fixture",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_client",
+      "label": "client()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L20",
+      "_py_fixture": "?",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_login",
+      "label": "login()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L37",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_booking",
+      "label": "booking()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L44",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_test_history_receipt_feedback_and_owner_isolation",
+      "label": "test_history_receipt_feedback_and_owner_isolation()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L53",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_test_wallet_atomic_increment_and_validation",
+      "label": "test_wallet_atomic_increment_and_validation()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L77",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_test_reservations_validate_edit_cancel_and_isolation",
+      "label": "test_reservations_validate_edit_cancel_and_isolation()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L91",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_test_expired_reservations_are_not_upcoming_or_editable",
+      "label": "test_expired_reservations_are_not_upcoming_or_editable()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L116",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_rationale_1",
+      "label": "Exercise activity APIs against a separate real MongoDB database.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_rationale_21",
+      "label": "Use an isolated temporary Mongo database and the real app lifespan.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L21",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_rationale_38",
+      "label": "Create an independent rider session.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L38",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_rationale_45",
+      "label": "Create a server-priced booking through the public API.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L45",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_rationale_54",
+      "label": "Only completed owned bookings appear; feedback and fare survive re-reads.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L54",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_rationale_78",
+      "label": "Concurrent additions accumulate in integer paise without crossing owners.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L78",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_rationale_92",
+      "label": "Reservations have future dates and cannot be modified across owners or after\u2026",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L92",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_activity_rationale_117",
+      "label": "Past reservations are excluded from pages and cannot be changed.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L117",
       "_origin": "ast"
     },
     {
@@ -2283,6 +2840,40 @@
       "_origin": "ast"
     },
     {
+      "id": "frontend_app_account_page",
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "frontend/app/account/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_app_account_page_accountpage",
+      "label": "AccountPage()",
+      "file_type": "code",
+      "source_file": "frontend/app/account/page.tsx",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_app_activity_page",
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "frontend/app/activity/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_app_activity_page_activitypage",
+      "label": "ActivityPage()",
+      "file_type": "code",
+      "source_file": "frontend/app/activity/page.tsx",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_app_layout",
       "label": "layout.tsx",
       "file_type": "code",
@@ -2296,7 +2887,7 @@
       "label": "metadata",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "_origin": "ast",
       "community": 10
     },
@@ -2305,7 +2896,7 @@
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L8",
+      "source_location": "L9",
       "_callable": true,
       "_origin": "ast",
       "community": 10
@@ -2328,6 +2919,235 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5
+    },
+    {
+      "id": "frontend_app_services_page",
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "frontend/app/services/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_app_services_page_servicespage",
+      "label": "ServicesPage()",
+      "file_type": "code",
+      "source_file": "frontend/app/services/page.tsx",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_account",
+      "label": "Account.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_account_account",
+      "label": "Account()",
+      "file_type": "code",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L7",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_account_account_load",
+      "label": "load()",
+      "file_type": "code",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L21",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_account_account_perform",
+      "label": "perform()",
+      "file_type": "code",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L30",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_account_account_change",
+      "label": "change()",
+      "file_type": "code",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L34",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_account_account_photo",
+      "label": "photo()",
+      "file_type": "code",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L35",
+      "_callable": true,
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "readAsDataURL",
+            "receiver_type": "FileReader",
+            "lang": "typescript",
+            "line": "L38"
+          }
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activity_test",
+      "label": "Activity.test.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/Activity.test.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activity_test_response",
+      "label": "response()",
+      "file_type": "code",
+      "source_file": "frontend/components/Activity.test.tsx",
+      "source_location": "L10",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activity",
+      "label": "Activity.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activity_message",
+      "label": "message()",
+      "file_type": "code",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L7",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activity_cache",
+      "label": "Cache",
+      "file_type": "code",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L9",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activity_readcache",
+      "label": "readCache()",
+      "file_type": "code",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activity_savecache",
+      "label": "saveCache()",
+      "file_type": "code",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L16",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activity_activity",
+      "label": "Activity()",
+      "file_type": "code",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L22",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activity_activity_load",
+      "label": "load()",
+      "file_type": "code",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L44",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activity_activity_perform",
+      "label": "perform()",
+      "file_type": "code",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L72",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activity_activity_openreceipt",
+      "label": "openReceipt()",
+      "file_type": "code",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L76",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activity_activity_edit",
+      "label": "edit()",
+      "file_type": "code",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L80",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activity_activity_download",
+      "label": "download()",
+      "file_type": "code",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L90",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activityflows_test",
+      "label": "ActivityFlows.test.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activityflows_test_response",
+      "label": "response()",
+      "file_type": "code",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L10",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activityflows_test_ride",
+      "label": "ride",
+      "file_type": "code",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_activityflows_test_receipt",
+      "label": "receipt",
+      "file_type": "code",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L12",
+      "_origin": "ast"
     },
     {
       "id": "frontend_components_booking_test",
@@ -2446,6 +3266,23 @@
       "_origin": "ast"
     },
     {
+      "id": "frontend_components_feedbackform",
+      "label": "FeedbackForm.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/FeedbackForm.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_feedbackform_feedbackform",
+      "label": "FeedbackForm()",
+      "file_type": "code",
+      "source_file": "frontend/components/FeedbackForm.tsx",
+      "source_location": "L7",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_components_identity_test",
       "label": "Identity.test.tsx",
       "file_type": "code",
@@ -2506,7 +3343,7 @@
             "callee": "preventDefault",
             "receiver_type": "FormEvent",
             "lang": "typescript",
-            "line": "L73"
+            "line": "L74"
           }
         ]
       },
@@ -2538,7 +3375,7 @@
       "label": "start()",
       "file_type": "code",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L44",
+      "source_location": "L45",
       "_callable": true,
       "_origin": "ast",
       "community": 5
@@ -2548,7 +3385,7 @@
       "label": "entry()",
       "file_type": "code",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L50",
+      "source_location": "L51",
       "_callable": true,
       "_origin": "ast",
       "community": 5
@@ -2558,7 +3395,7 @@
       "label": "change()",
       "file_type": "code",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L53",
+      "source_location": "L54",
       "_callable": true,
       "_origin": "ast",
       "community": 5
@@ -2568,7 +3405,7 @@
       "label": "upload()",
       "file_type": "code",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L56",
+      "source_location": "L57",
       "_callable": true,
       "metadata": {
         "unresolved_calls": [
@@ -2576,7 +3413,7 @@
             "callee": "readAsDataURL",
             "receiver_type": "FileReader",
             "lang": "typescript",
-            "line": "L62"
+            "line": "L63"
           }
         ]
       },
@@ -2624,6 +3461,23 @@
       "source_file": "leaflet",
       "confidence": "EXTRACTED",
       "type": "module",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_navigation",
+      "label": "Navigation.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/Navigation.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_navigation_navigation",
+      "label": "Navigation()",
+      "file_type": "code",
+      "source_file": "frontend/components/Navigation.tsx",
+      "source_location": "L8",
+      "_callable": true,
       "_origin": "ast"
     },
     {
@@ -2689,7 +3543,7 @@
       "label": "select()",
       "file_type": "code",
       "source_file": "frontend/components/Search.tsx",
-      "source_location": "L55",
+      "source_location": "L71",
       "_callable": true,
       "_origin": "ast"
     },
@@ -2698,7 +3552,7 @@
       "label": "save()",
       "file_type": "code",
       "source_file": "frontend/components/Search.tsx",
-      "source_location": "L64",
+      "source_location": "L80",
       "_callable": true,
       "_origin": "ast"
     },
@@ -2707,7 +3561,7 @@
       "label": "remove()",
       "file_type": "code",
       "source_file": "frontend/components/Search.tsx",
-      "source_location": "L74",
+      "source_location": "L90",
       "_callable": true,
       "_origin": "ast"
     },
@@ -2748,7 +3602,7 @@
       "label": "symbols",
       "file_type": "code",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "_origin": "ast"
     },
     {
@@ -2756,7 +3610,7 @@
       "label": "labels",
       "file_type": "code",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L16",
+      "source_location": "L17",
       "_origin": "ast"
     },
     {
@@ -2764,7 +3618,7 @@
       "label": "TrackingMap()",
       "file_type": "code",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L19",
+      "source_location": "L20",
       "_callable": true,
       "_origin": "ast"
     },
@@ -2773,7 +3627,7 @@
       "label": "Tracking()",
       "file_type": "code",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L57",
+      "source_location": "L65",
       "_callable": true,
       "_origin": "ast"
     },
@@ -2782,7 +3636,7 @@
       "label": "action()",
       "file_type": "code",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L83",
+      "source_location": "L103",
       "_callable": true,
       "_origin": "ast"
     },
@@ -2791,7 +3645,7 @@
       "label": "share()",
       "file_type": "code",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L90",
+      "source_location": "L110",
       "_callable": true,
       "_origin": "ast"
     },
@@ -2802,6 +3656,14 @@
       "source_file": "leaflet",
       "confidence": "EXTRACTED",
       "type": "module",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_activity_spec",
+      "label": "activity.spec.ts",
+      "file_type": "code",
+      "source_file": "frontend/e2e/activity.spec.ts",
+      "source_location": "L1",
       "_origin": "ast"
     },
     {
@@ -2949,11 +3811,61 @@
       "_origin": "ast"
     },
     {
+      "id": "frontend_lib_api_feedback",
+      "label": "Feedback",
+      "file_type": "code",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L11",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_lib_api_historyride",
+      "label": "HistoryRide",
+      "file_type": "code",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L12",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_lib_api_receipt",
+      "label": "Receipt",
+      "file_type": "code",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L13",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_lib_api_schedule",
+      "label": "Schedule",
+      "file_type": "code",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L14",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_lib_api_networkerror",
+      "label": "NetworkError",
+      "file_type": "code",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L17",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_lib_api_api",
       "label": "api()",
       "file_type": "code",
       "source_file": "frontend/lib/api.ts",
-      "source_location": "L13",
+      "source_location": "L20",
       "_callable": true,
       "_origin": "ast",
       "community": 5
@@ -3532,6 +4444,1046 @@
     }
   ],
   "links": [
+    {
+      "source": "backend_app_activity",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "fastapi",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_booking",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_core",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_activity_feedback_c8d767",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_feedback_c8d767",
+      "target": "backend_app_activity_py_basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_activity_funds",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_funds",
+      "target": "backend_app_activity_py_basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_activity_schedule",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedule",
+      "target": "backend_app_booking_quoteinput",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedule_future_time",
+      "target": "backend_app_activity_py_field_validator",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedule",
+      "target": "backend_app_activity_schedule_future_time",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedule_future_time",
+      "target": "datetime",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedule_future_time",
+      "target": "datetime",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_activity_public_schedule",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_activity_activityrepository",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_activityrepository",
+      "target": "backend_app_activity_activityrepository_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_activityrepository",
+      "target": "backend_app_activity_activityrepository_completed",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_activityrepository",
+      "target": "backend_app_activity_activityrepository_schedule",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_history",
+      "target": "backend_app_activity_py_get",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_activity_history",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_history",
+      "target": "backend_app_activity_py_request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_history",
+      "target": "backend_app_activity_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_history",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_history",
+      "target": "backend_app_activity_py_query",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_history",
+      "target": "backend_app_activity_py_ge",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_history",
+      "target": "backend_app_activity_py_le",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_receipt",
+      "target": "backend_app_activity_py_get",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_activity_receipt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_receipt",
+      "target": "backend_app_activity_py_request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_receipt",
+      "target": "backend_app_activity_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_receipt",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_activity_feedback_ef15f4",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_feedback_ef15f4",
+      "target": "backend_app_activity_feedback_c8d767",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_feedback_ef15f4",
+      "target": "backend_app_activity_py_request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_feedback_ef15f4",
+      "target": "backend_app_activity_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_feedback_ef15f4",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_wallet",
+      "target": "backend_app_activity_py_get",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_activity_wallet",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_wallet",
+      "target": "backend_app_activity_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_wallet",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_add_funds",
+      "target": "backend_app_activity_py_post",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_activity_add_funds",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_add_funds",
+      "target": "backend_app_activity_funds",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_add_funds",
+      "target": "backend_app_activity_py_request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_add_funds",
+      "target": "backend_app_activity_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_add_funds",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedules",
+      "target": "backend_app_activity_py_get",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L116",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_activity_schedules",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedules",
+      "target": "backend_app_activity_py_request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedules",
+      "target": "backend_app_activity_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedules",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedules",
+      "target": "backend_app_activity_py_query",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedules",
+      "target": "backend_app_activity_py_ge",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedules",
+      "target": "backend_app_activity_py_le",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_create_schedule",
+      "target": "backend_app_activity_py_post",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_activity_create_schedule",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_create_schedule",
+      "target": "backend_app_activity_schedule",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_create_schedule",
+      "target": "backend_app_activity_py_request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_create_schedule",
+      "target": "backend_app_activity_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_create_schedule",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_edit_schedule",
+      "target": "backend_app_activity_py_put",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_activity_edit_schedule",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_edit_schedule",
+      "target": "backend_app_activity_schedule",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_edit_schedule",
+      "target": "backend_app_activity_py_request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_edit_schedule",
+      "target": "backend_app_activity_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_edit_schedule",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_cancel_schedule",
+      "target": "backend_app_activity_py_post",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L149",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_activity_cancel_schedule",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L150",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_cancel_schedule",
+      "target": "backend_app_activity_py_request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L150",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_cancel_schedule",
+      "target": "backend_app_activity_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L150",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_cancel_schedule",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L150",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_receipt",
+      "target": "backend_app_activity_activityrepository",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_feedback_ef15f4",
+      "target": "backend_app_activity_activityrepository",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L93",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedules",
+      "target": "backend_app_activity_public_schedule",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L122",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_create_schedule",
+      "target": "backend_app_activity_public_schedule",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L133",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_edit_schedule",
+      "target": "backend_app_activity_activityrepository",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L140",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_edit_schedule",
+      "target": "backend_app_activity_public_schedule",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L146",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_cancel_schedule",
+      "target": "backend_app_activity_public_schedule",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L152",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_cancel_schedule",
+      "target": "backend_app_activity_activityrepository",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L152",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_1",
+      "target": "backend_app_activity",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_24",
+      "target": "backend_app_activity_funds",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_30",
+      "target": "backend_app_activity_schedule",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_38",
+      "target": "backend_app_activity_schedule_future_time",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_45",
+      "target": "backend_app_activity_public_schedule",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_50",
+      "target": "backend_app_activity_activityrepository",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_52",
+      "target": "backend_app_activity_activityrepository_init",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_56",
+      "target": "backend_app_activity_activityrepository_completed",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_63",
+      "target": "backend_app_activity_activityrepository_schedule",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_75",
+      "target": "backend_app_activity_history",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_84",
+      "target": "backend_app_activity_receipt",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_103",
+      "target": "backend_app_activity_wallet",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L103",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_109",
+      "target": "backend_app_activity_add_funds",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L109",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_118",
+      "target": "backend_app_activity_schedules",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_127",
+      "target": "backend_app_activity_create_schedule",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L127",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_138",
+      "target": "backend_app_activity_edit_schedule",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_rationale_151",
+      "target": "backend_app_activity_cancel_schedule",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L151",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
     {
       "source": "backend_app_booking",
       "target": "decimal",
@@ -4445,6 +6397,17 @@
     },
     {
       "source": "backend_app_core",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/core.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_core",
       "target": "fastapi",
       "relation": "imports_from",
       "context": "import",
@@ -4986,7 +6949,7 @@
     },
     {
       "source": "backend_app_identity_profileupdate_check_phone",
-      "target": "field_validator",
+      "target": "backend_app_identity_py_field_validator",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/identity.py",
@@ -5007,7 +6970,7 @@
     },
     {
       "source": "backend_app_identity_profileupdate_check_photo",
-      "target": "field_validator",
+      "target": "backend_app_identity_py_field_validator",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/identity.py",
@@ -5912,7 +7875,7 @@
     },
     {
       "source": "backend_app_locations_search",
-      "target": "query",
+      "target": "backend_app_locations_py_query",
       "relation": "references",
       "context": "generic_arg",
       "confidence": "EXTRACTED",
@@ -5934,7 +7897,7 @@
     },
     {
       "source": "backend_app_locations_search",
-      "target": "ge",
+      "target": "backend_app_locations_py_ge",
       "relation": "references",
       "context": "generic_arg",
       "confidence": "EXTRACTED",
@@ -5945,7 +7908,7 @@
     },
     {
       "source": "backend_app_locations_search",
-      "target": "le",
+      "target": "backend_app_locations_py_le",
       "relation": "references",
       "context": "generic_arg",
       "confidence": "EXTRACTED",
@@ -6010,7 +7973,7 @@
     },
     {
       "source": "backend_app_locations_saved",
-      "target": "query",
+      "target": "backend_app_locations_py_query",
       "relation": "references",
       "context": "generic_arg",
       "confidence": "EXTRACTED",
@@ -6021,7 +7984,7 @@
     },
     {
       "source": "backend_app_locations_saved",
-      "target": "ge",
+      "target": "backend_app_locations_py_ge",
       "relation": "references",
       "context": "generic_arg",
       "confidence": "EXTRACTED",
@@ -6032,7 +7995,7 @@
     },
     {
       "source": "backend_app_locations_saved",
-      "target": "le",
+      "target": "backend_app_locations_py_le",
       "relation": "references",
       "context": "generic_arg",
       "confidence": "EXTRACTED",
@@ -6435,11 +8398,22 @@
     },
     {
       "source": "backend_app_main",
+      "target": "backend_app_activity",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/main.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_main",
       "target": "backend_app_main_settings",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -6449,7 +8423,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -6459,7 +8433,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -6470,7 +8444,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -6481,7 +8455,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -6491,7 +8465,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -6501,7 +8475,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L50",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -6512,7 +8486,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -6524,7 +8498,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "backend/app/main.py",
-      "source_location": "L42",
+      "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -6539,22 +8513,22 @@
       "_origin": "ast"
     },
     {
-      "source": "backend_app_main_rationale_16",
+      "source": "backend_app_main_rationale_17",
       "target": "backend_app_main_settings",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
-      "source": "backend_app_main_rationale_24",
+      "source": "backend_app_main_rationale_25",
       "target": "backend_app_main_create_app",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -7287,6 +9261,244 @@
       "_origin": "ast"
     },
     {
+      "source": "backend_tests_test_activity",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity",
+      "target": "backend_app_main",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity_client",
+      "target": "backend_tests_test_activity_py_fixture",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity",
+      "target": "backend_tests_test_activity_client",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity",
+      "target": "backend_tests_test_activity_login",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity",
+      "target": "backend_tests_test_activity_booking",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity",
+      "target": "backend_tests_test_activity_test_history_receipt_feedback_and_owner_isolation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity",
+      "target": "backend_tests_test_activity_test_wallet_atomic_increment_and_validation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity",
+      "target": "backend_tests_test_activity_test_reservations_validate_edit_cancel_and_isolation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity",
+      "target": "backend_tests_test_activity_test_expired_reservations_are_not_upcoming_or_editable",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L116",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity_test_history_receipt_feedback_and_owner_isolation",
+      "target": "backend_tests_test_activity_login",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity_test_history_receipt_feedback_and_owner_isolation",
+      "target": "backend_tests_test_activity_booking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity_test_wallet_atomic_increment_and_validation",
+      "target": "backend_tests_test_activity_login",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity_test_reservations_validate_edit_cancel_and_isolation",
+      "target": "backend_tests_test_activity_login",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity_test_expired_reservations_are_not_upcoming_or_editable",
+      "target": "backend_tests_test_activity_login",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity_rationale_1",
+      "target": "backend_tests_test_activity",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity_rationale_21",
+      "target": "backend_tests_test_activity_client",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity_rationale_38",
+      "target": "backend_tests_test_activity_login",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity_rationale_45",
+      "target": "backend_tests_test_activity_booking",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity_rationale_54",
+      "target": "backend_tests_test_activity_test_history_receipt_feedback_and_owner_isolation",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity_rationale_78",
+      "target": "backend_tests_test_activity_test_wallet_atomic_increment_and_validation",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity_rationale_92",
+      "target": "backend_tests_test_activity_test_reservations_validate_edit_cancel_and_isolation",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L92",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity_rationale_117",
+      "target": "backend_tests_test_activity_test_expired_reservations_are_not_upcoming_or_editable",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "backend_tests_test_booking",
       "target": "backend_app_booking",
       "relation": "imports_from",
@@ -7459,6 +9671,17 @@
       "confidence": "EXTRACTED",
       "source_file": "backend/tests/test_booking.py",
       "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_identity",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_identity.py",
+      "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8013,6 +10236,48 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_app_account_page",
+      "target": "frontend_components_account",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/account/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_account_page",
+      "target": "frontend_app_account_page_accountpage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/account/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_activity_page",
+      "target": "frontend_components_activity",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/activity/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_activity_page",
+      "target": "frontend_app_activity_page_activitypage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/activity/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_app_layout",
       "target": "ref_next",
       "relation": "imports_from",
@@ -8037,11 +10302,22 @@
     },
     {
       "source": "frontend_app_layout",
+      "target": "frontend_components_navigation",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_layout",
       "target": "frontend_app_layout_metadata",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8051,7 +10327,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/app/layout.tsx",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8073,6 +10349,778 @@
       "confidence": "EXTRACTED",
       "source_file": "frontend/app/page.tsx",
       "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_services_page",
+      "target": "frontend_components_activity",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/services/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_services_page",
+      "target": "frontend_app_services_page_servicespage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/services/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account",
+      "target": "frontend_lib_api",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account",
+      "target": "frontend_lib_api_api",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account",
+      "target": "frontend_lib_api_location",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account",
+      "target": "frontend_lib_api_locationpage",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account",
+      "target": "frontend_lib_api_profile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account",
+      "target": "frontend_lib_api_savedplace",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account",
+      "target": "frontend_components_account_account",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account_account",
+      "target": "frontend_components_account_account_load",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account_account",
+      "target": "frontend_components_account_account_perform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account_account",
+      "target": "frontend_components_account_account_change",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account_account",
+      "target": "frontend_components_account_account_photo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account_account",
+      "target": "frontend_components_account_account_load",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account_account",
+      "target": "frontend_components_account_account_perform",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account_account",
+      "target": "frontend_components_account_account_change",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account_account",
+      "target": "frontend_components_account_account_photo",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account_account_photo",
+      "target": "frontend_components_account_account_change",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_test",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.test.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_test",
+      "target": "ref_testing_library_jest_dom",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.test.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_test",
+      "target": "ref_vitest",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_test",
+      "target": "ref_testing_library_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_test",
+      "target": "ref_testing_library_user_event",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.test.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_test",
+      "target": "frontend_components_activity",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.test.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_test",
+      "target": "frontend_components_account",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.test.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_test",
+      "target": "frontend_components_activity_test_response",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.test.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_test",
+      "target": "frontend_components_activity_test_response",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.test.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_lib_api",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_lib_api_api",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_lib_api_networkerror",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_lib_api_historyride",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_lib_api_location",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_lib_api_locationpage",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_lib_api_receipt",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_lib_api_schedule",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_components_feedbackform",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_components_activity_message",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_components_activity_cache",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_components_activity_readcache",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_components_activity_savecache",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_components_activity_activity",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity",
+      "target": "frontend_components_activity_activity_load",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity",
+      "target": "frontend_components_activity_activity_perform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity",
+      "target": "frontend_components_activity_activity_openreceipt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity",
+      "target": "frontend_components_activity_activity_edit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity",
+      "target": "frontend_components_activity_activity_download",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_savecache",
+      "target": "frontend_components_activity_readcache",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity",
+      "target": "frontend_components_activity_activity_load",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity",
+      "target": "frontend_components_activity_message",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity",
+      "target": "frontend_components_activity_activity_perform",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity",
+      "target": "frontend_components_activity_activity_edit",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L103",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity",
+      "target": "frontend_components_activity_activity_openreceipt",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L120",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity",
+      "target": "frontend_components_activity_activity_download",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L122",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity",
+      "target": "frontend_components_activity_savecache",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity_load",
+      "target": "frontend_components_activity_savecache",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity_load",
+      "target": "frontend_components_activity_readcache",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity_perform",
+      "target": "frontend_components_activity_message",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity_openreceipt",
+      "target": "frontend_components_activity_savecache",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity_openreceipt",
+      "target": "frontend_components_activity_readcache",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activityflows_test",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activityflows_test",
+      "target": "ref_testing_library_jest_dom",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activityflows_test",
+      "target": "ref_vitest",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activityflows_test",
+      "target": "ref_testing_library_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activityflows_test",
+      "target": "ref_testing_library_user_event",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activityflows_test",
+      "target": "frontend_components_activity",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activityflows_test",
+      "target": "frontend_components_account",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activityflows_test",
+      "target": "frontend_components_activityflows_test_response",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activityflows_test",
+      "target": "frontend_components_activityflows_test_ride",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activityflows_test",
+      "target": "frontend_components_activityflows_test_receipt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activityflows_test",
+      "target": "frontend_components_activityflows_test_response",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8384,6 +11432,60 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_components_feedbackform",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/FeedbackForm.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_feedbackform",
+      "target": "frontend_lib_api",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/FeedbackForm.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_feedbackform",
+      "target": "frontend_lib_api_api",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/FeedbackForm.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_feedbackform",
+      "target": "frontend_lib_api_feedback",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/FeedbackForm.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_feedbackform",
+      "target": "frontend_components_feedbackform_feedbackform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/FeedbackForm.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_components_identity_test",
       "target": "ref_react",
       "relation": "imports_from",
@@ -8592,7 +11694,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L44",
+      "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8602,7 +11704,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L50",
+      "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8612,7 +11714,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L53",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8622,7 +11724,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L56",
+      "source_location": "L57",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8633,7 +11735,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L73",
+      "source_location": "L74",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8644,7 +11746,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L74",
+      "source_location": "L75",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8655,7 +11757,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L77",
+      "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8666,7 +11768,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L81",
+      "source_location": "L82",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8678,7 +11780,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L81",
+      "source_location": "L82",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8689,7 +11791,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L81",
+      "source_location": "L82",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8700,7 +11802,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L51",
+      "source_location": "L52",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8711,7 +11813,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L51",
+      "source_location": "L52",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8722,7 +11824,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L60",
+      "source_location": "L61",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8821,7 +11923,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Map.tsx",
-      "source_location": "L41",
+      "source_location": "L44",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8831,6 +11933,49 @@
       "relation": "dynamic_import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Map.tsx",
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_navigation",
+      "target": "ref_next",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Navigation.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_navigation",
+      "target": "ref_next",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Navigation.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_navigation",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Navigation.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_navigation",
+      "target": "frontend_components_navigation_navigation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Navigation.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
       "_origin": "ast"
     },
     {
@@ -9054,7 +12199,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Search.tsx",
-      "source_location": "L55",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9064,7 +12209,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Search.tsx",
-      "source_location": "L64",
+      "source_location": "L80",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9074,7 +12219,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Search.tsx",
-      "source_location": "L74",
+      "source_location": "L90",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9097,7 +12242,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Search.tsx",
-      "source_location": "L91",
+      "source_location": "L107",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9108,7 +12253,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Search.tsx",
-      "source_location": "L94",
+      "source_location": "L110",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9119,7 +12264,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Search.tsx",
-      "source_location": "L96",
+      "source_location": "L112",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9264,6 +12409,28 @@
     },
     {
       "source": "frontend_components_tracking",
+      "target": "frontend_lib_api_feedback",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
+      "target": "frontend_lib_api_receipt",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
       "target": "frontend_lib_api_ridebooking",
       "relation": "imports",
       "context": "import",
@@ -9286,11 +12453,22 @@
     },
     {
       "source": "frontend_components_tracking",
+      "target": "frontend_components_feedbackform",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
       "target": "frontend_components_tracking_symbols",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9300,7 +12478,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9310,7 +12488,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9320,7 +12498,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L57",
+      "source_location": "L65",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9330,7 +12508,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L83",
+      "source_location": "L103",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9340,7 +12518,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L90",
+      "source_location": "L110",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9352,7 +12530,7 @@
       "deferred": true,
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9363,7 +12541,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L101",
+      "source_location": "L121",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9374,7 +12552,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L106",
+      "source_location": "L126",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9385,7 +12563,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Tracking.tsx",
-      "source_location": "L112",
+      "source_location": "L132",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9395,6 +12573,17 @@
       "relation": "dynamic_import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Tracking.tsx",
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_activity_spec",
+      "target": "ref_playwright_test",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/activity.spec.ts",
+      "source_location": "L1",
+      "weight": 1.0,
       "_origin": "ast"
     },
     {
@@ -9543,11 +12732,72 @@
     },
     {
       "source": "frontend_lib_api",
-      "target": "frontend_lib_api_api",
+      "target": "frontend_lib_api_feedback",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_lib_api",
+      "target": "frontend_lib_api_historyride",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_lib_api",
+      "target": "frontend_lib_api_receipt",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/lib/api.ts",
       "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_lib_api",
+      "target": "frontend_lib_api_schedule",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_lib_api",
+      "target": "frontend_lib_api_networkerror",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_lib_api",
+      "target": "frontend_lib_api_api",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_lib_api_api",
+      "target": "frontend_lib_api_networkerror",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -10168,6 +13418,39 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_app_account_page",
+      "target": "frontend_components_account_account",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/account/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_activity_page",
+      "target": "frontend_components_activity_activity",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/activity/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_layout",
+      "target": "frontend_components_navigation_navigation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_app_page",
       "target": "frontend_components_identity_identity",
       "relation": "imports",
@@ -10175,6 +13458,72 @@
       "confidence": "EXTRACTED",
       "source_file": "frontend/app/page.tsx",
       "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_services_page",
+      "target": "frontend_components_activity_activity",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/services/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_test",
+      "target": "frontend_components_activity_activity",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.test.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_test",
+      "target": "frontend_components_account_account",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.test.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity",
+      "target": "frontend_components_feedbackform_feedbackform",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activityflows_test",
+      "target": "frontend_components_activity_activity",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activityflows_test",
+      "target": "frontend_components_account_account",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/ActivityFlows.test.tsx",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -10252,6 +13601,94 @@
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Tracking.test.tsx",
       "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
+      "target": "frontend_components_feedbackform_feedbackform",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_booking_bookingrepository",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_booking_quoteinput",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_booking_object_id",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_booking_public_booking",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_booking_public_quote",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_core_current_user",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity",
+      "target": "backend_app_core_database",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/activity.py",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -10388,6 +13825,28 @@
       "_origin": "ast"
     },
     {
+      "source": "backend_tests_test_activity",
+      "target": "backend_app_main_settings",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_activity",
+      "target": "backend_app_main_create_app",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "backend_tests_test_booking",
       "target": "backend_app_booking_prices",
       "relation": "imports",
@@ -10520,6 +13979,28 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_components_account_account",
+      "target": "frontend_lib_api_api",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity",
+      "target": "frontend_lib_api_api",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_components_booking_booking",
       "target": "frontend_lib_api_api",
       "relation": "calls",
@@ -10548,7 +14029,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Search.tsx",
-      "source_location": "L41",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_tracking",
+      "target": "frontend_lib_api_api",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L93",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -10627,6 +14119,61 @@
       "source_file": "backend/tests/test_identity.py",
       "source_location": "L79",
       "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_create_schedule",
+      "target": "backend_app_booking_bookingrepository",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L129",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_edit_schedule",
+      "target": "backend_app_booking_bookingrepository",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L144",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedule",
+      "target": "backend_app_booking_quoteinput",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L29",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_create_schedule",
+      "target": "backend_app_booking_quoteinput",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L129",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_edit_schedule",
+      "target": "backend_app_booking_quoteinput",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L144",
+      "weight": 0.8,
       "_origin": "ast"
     },
     {
@@ -10718,6 +14265,17 @@
       "_origin": "ast"
     },
     {
+      "source": "backend_tests_test_activity_client",
+      "target": "backend_app_main_settings",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L24",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
       "source": "backend_tests_test_booking_test_fare_formula_tiers_surge_and_road_estimate",
       "target": "backend_app_locations_location",
       "relation": "uses",
@@ -10770,6 +14328,198 @@
       "source_file": "backend/tests/test_tracking.py",
       "source_location": "L24",
       "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_activityrepository_completed",
+      "target": "backend_app_booking_object_id",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_activityrepository_schedule",
+      "target": "backend_app_booking_object_id",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_history",
+      "target": "backend_app_core_database",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_history",
+      "target": "backend_app_booking_public_booking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_receipt",
+      "target": "backend_app_core_database",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_receipt",
+      "target": "backend_app_booking_public_booking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_feedback_ef15f4",
+      "target": "backend_app_core_database",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L93",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_feedback_ef15f4",
+      "target": "backend_app_booking_object_id",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_add_funds",
+      "target": "backend_app_core_database",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L110",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_schedules",
+      "target": "backend_app_core_database",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_create_schedule",
+      "target": "backend_app_core_database",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L128",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_create_schedule",
+      "target": "backend_app_booking_public_quote",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L129",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_edit_schedule",
+      "target": "backend_app_core_database",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_edit_schedule",
+      "target": "backend_app_booking_object_id",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L141",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_edit_schedule",
+      "target": "backend_app_booking_public_quote",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L144",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_cancel_schedule",
+      "target": "backend_app_core_database",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L152",
+      "weight": 1.0,
       "_origin": "ast"
     },
     {
@@ -10965,6 +14715,18 @@
       "_origin": "ast"
     },
     {
+      "source": "backend_tests_test_activity_client",
+      "target": "backend_app_main_create_app",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/tests/test_activity.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "backend_tests_test_booking_client",
       "target": "backend_app_main_create_app",
       "relation": "calls",
@@ -11013,6 +14775,42 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_app_account_page_accountpage",
+      "target": "frontend_components_account_account",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/app/account/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_activity_page_activitypage",
+      "target": "frontend_components_activity_activity",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/app/activity/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_layout_rootlayout",
+      "target": "frontend_components_navigation_navigation",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/app/layout.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_app_page_home",
       "target": "frontend_components_identity_identity",
       "relation": "calls",
@@ -11021,6 +14819,54 @@
       "confidence_score": 1.0,
       "source_file": "frontend/app/page.tsx",
       "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_services_page_servicespage",
+      "target": "frontend_components_activity_activity",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/app/services/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_account_account_load",
+      "target": "frontend_lib_api_api",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/components/Account.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity",
+      "target": "frontend_components_feedbackform_feedbackform",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_activity_activity_load",
+      "target": "frontend_lib_api_api",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/components/Activity.tsx",
+      "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -11056,7 +14902,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/components/Identity.tsx",
-      "source_location": "L65",
+      "source_location": "L66",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -11068,7 +14914,43 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/components/Search.tsx",
-      "source_location": "L85",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_tracking",
+      "target": "frontend_components_feedbackform_feedbackform",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L134",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_feedback_ef15f4",
+      "target": "backend_app_activity_activityrepository_completed",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_activity_edit_schedule",
+      "target": "backend_app_activity_activityrepository_schedule",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "backend/app/activity.py",
+      "source_location": "L146",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -11175,7 +15057,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L86",
+      "source_location": "L111",
       "weight": 1.0,
       "_origin": "ast",
       "_src": "backend_app_booking_bookingrepository_create_quote",
@@ -11188,11 +15070,37 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L136",
+      "source_location": "L161",
       "weight": 1.0,
       "_origin": "ast",
       "_src": "backend_app_booking_create_quote",
       "_tgt": "backend_app_booking_quoteinput"
+    },
+    {
+      "source": "model_validator",
+      "target": "backend_app_booking_bookinginput_parcel_details",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_app_booking_bookinginput_parcel_details",
+      "_tgt": "model_validator"
+    },
+    {
+      "source": "model_validator",
+      "target": "backend_app_booking_parcelinput_suitable_vehicle",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_app_booking_parcelinput_suitable_vehicle",
+      "_tgt": "model_validator"
     },
     {
       "source": "model_validator",
@@ -11217,8 +15125,8 @@
       "source_location": "L142",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_booking_create_ride",
-      "_tgt": "backend_app_booking_bookinginput"
+      "_src": "backend_app_booking_bookinginput",
+      "_tgt": "backend_app_booking_create_ride"
     },
     {
       "source": "backend_app_booking_py_objectid",
@@ -11227,7 +15135,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L104",
+      "source_location": "L129",
       "weight": 1.0,
       "_origin": "ast",
       "_src": "backend_app_booking_bookingrepository_booking",
@@ -11240,7 +15148,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L94",
+      "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast",
       "_src": "backend_app_booking_bookingrepository_quote",
@@ -11253,7 +15161,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L127",
+      "source_location": "L152",
       "weight": 1.0,
       "_origin": "ast",
       "_src": "backend_app_booking_object_id",
@@ -11265,7 +15173,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L135",
+      "source_location": "L160",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -11278,7 +15186,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L141",
+      "source_location": "L166",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -11292,7 +15200,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L142",
+      "source_location": "L167",
       "weight": 1.0,
       "_origin": "ast",
       "_src": "backend_app_booking_create_ride",
@@ -11305,7 +15213,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L161",
+      "source_location": "L187",
       "weight": 1.0,
       "_origin": "ast",
       "_src": "backend_app_booking_get_ride",
@@ -11318,7 +15226,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L142",
+      "source_location": "L167",
       "weight": 1.0,
       "_origin": "ast",
       "_src": "backend_app_booking_create_ride",
@@ -11331,7 +15239,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L161",
+      "source_location": "L187",
       "weight": 1.0,
       "_origin": "ast",
       "_src": "backend_app_booking_get_ride",
@@ -11343,7 +15251,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L160",
+      "source_location": "L186",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -11510,6 +15418,58 @@
       "_tgt": "backend_app_locations_saved"
     },
     {
+      "source": "backend_app_core_current_user",
+      "target": "backend_app_tracking_advance_parcel",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L160",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_tracking_advance_parcel",
+      "_tgt": "backend_app_core_current_user"
+    },
+    {
+      "source": "backend_app_core_current_user",
+      "target": "backend_app_tracking_cancel",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L147",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_tracking_cancel",
+      "_tgt": "backend_app_core_current_user"
+    },
+    {
+      "source": "backend_app_core_current_user",
+      "target": "backend_app_tracking_get_tracking",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_tracking_get_tracking",
+      "_tgt": "backend_app_core_current_user"
+    },
+    {
+      "source": "backend_app_core_current_user",
+      "target": "backend_app_tracking_verify_pin",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_tracking_verify_pin",
+      "_tgt": "backend_app_core_current_user"
+    },
+    {
       "source": "backend_app_identity_phonerequest",
       "target": "backend_app_identity_start_phone",
       "relation": "references",
@@ -11562,32 +15522,6 @@
       "weight": 1.0,
       "_src": "backend_app_identity_profileupdate",
       "_tgt": "backend_app_identity_update_profile"
-    },
-    {
-      "source": "field_validator",
-      "target": "backend_app_identity_profileupdate_check_phone",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/identity.py",
-      "source_location": "L44",
-      "weight": 1.0,
-      "context": "decorator",
-      "_origin": "ast",
-      "_src": "backend_app_identity_profileupdate_check_phone",
-      "_tgt": "field_validator"
-    },
-    {
-      "source": "field_validator",
-      "target": "backend_app_identity_profileupdate_check_photo",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/identity.py",
-      "source_location": "L52",
-      "weight": 1.0,
-      "context": "decorator",
-      "_origin": "ast",
-      "_src": "backend_app_identity_profileupdate_check_photo",
-      "_tgt": "field_validator"
     },
     {
       "source": "backend_app_identity_profile",
@@ -11652,8 +15586,8 @@
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
-      "_src": "backend_app_identity_start_phone",
-      "_tgt": "backend_app_identity_py_post"
+      "_src": "backend_app_identity_py_post",
+      "_tgt": "backend_app_identity_start_phone"
     },
     {
       "source": "backend_app_identity_py_post",
@@ -11665,8 +15599,8 @@
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
-      "_src": "backend_app_identity_verify_phone",
-      "_tgt": "backend_app_identity_py_post"
+      "_src": "backend_app_identity_py_post",
+      "_tgt": "backend_app_identity_verify_phone"
     },
     {
       "source": "backend_app_identity_py_request",
@@ -11821,8 +15755,8 @@
       "source_location": "L101",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_locations_savedrepository_delete",
-      "_tgt": "backend_app_locations_py_objectid"
+      "_src": "backend_app_locations_py_objectid",
+      "_tgt": "backend_app_locations_savedrepository_delete"
     },
     {
       "source": "backend_app_locations_py_objectid",
@@ -11834,8 +15768,8 @@
       "source_location": "L95",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_locations_savedrepository_save",
-      "_tgt": "backend_app_locations_py_objectid"
+      "_src": "backend_app_locations_py_objectid",
+      "_tgt": "backend_app_locations_savedrepository_save"
     },
     {
       "source": "backend_app_locations_py_get",
@@ -11862,45 +15796,6 @@
       "_origin": "ast",
       "_src": "backend_app_locations_py_get",
       "_tgt": "backend_app_locations_search"
-    },
-    {
-      "source": "query",
-      "target": "backend_app_locations_saved",
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/locations.py",
-      "source_location": "L121",
-      "weight": 1.0,
-      "_origin": "ast",
-      "_src": "backend_app_locations_saved",
-      "_tgt": "query"
-    },
-    {
-      "source": "ge",
-      "target": "backend_app_locations_saved",
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/locations.py",
-      "source_location": "L121",
-      "weight": 1.0,
-      "_origin": "ast",
-      "_src": "backend_app_locations_saved",
-      "_tgt": "ge"
-    },
-    {
-      "source": "le",
-      "target": "backend_app_locations_saved",
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/locations.py",
-      "source_location": "L121",
-      "weight": 1.0,
-      "_origin": "ast",
-      "_src": "backend_app_locations_saved",
-      "_tgt": "le"
     },
     {
       "source": "backend_app_locations_py_request",
@@ -11981,6 +15876,175 @@
       "_tgt": "delete"
     },
     {
+      "source": "backend_app_tracking_pininput",
+      "target": "backend_app_tracking_verify_pin",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_tracking_verify_pin",
+      "_tgt": "backend_app_tracking_pininput"
+    },
+    {
+      "source": "backend_app_tracking_cancelinput",
+      "target": "backend_app_tracking_cancel",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L147",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_tracking_cancel",
+      "_tgt": "backend_app_tracking_cancelinput"
+    },
+    {
+      "source": "backend_app_tracking_trackingrepository",
+      "target": "backend_app_tracking_current",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L110",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_tracking_current",
+      "_tgt": "backend_app_tracking_trackingrepository"
+    },
+    {
+      "source": "backend_app_tracking_py_get",
+      "target": "backend_app_tracking_get_tracking",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_app_tracking_get_tracking",
+      "_tgt": "backend_app_tracking_py_get"
+    },
+    {
+      "source": "backend_app_tracking_py_request",
+      "target": "backend_app_tracking_advance_parcel",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L160",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_tracking_advance_parcel",
+      "_tgt": "backend_app_tracking_py_request"
+    },
+    {
+      "source": "backend_app_tracking_py_request",
+      "target": "backend_app_tracking_cancel",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L147",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_tracking_cancel",
+      "_tgt": "backend_app_tracking_py_request"
+    },
+    {
+      "source": "backend_app_tracking_py_request",
+      "target": "backend_app_tracking_verify_pin",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_tracking_verify_pin",
+      "_tgt": "backend_app_tracking_py_request"
+    },
+    {
+      "source": "backend_app_tracking_py_depends",
+      "target": "backend_app_tracking_advance_parcel",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L160",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_tracking_advance_parcel",
+      "_tgt": "backend_app_tracking_py_depends"
+    },
+    {
+      "source": "backend_app_tracking_py_depends",
+      "target": "backend_app_tracking_cancel",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L147",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_tracking_cancel",
+      "_tgt": "backend_app_tracking_py_depends"
+    },
+    {
+      "source": "backend_app_tracking_py_depends",
+      "target": "backend_app_tracking_verify_pin",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_tracking_verify_pin",
+      "_tgt": "backend_app_tracking_py_depends"
+    },
+    {
+      "source": "backend_app_tracking_py_post",
+      "target": "backend_app_tracking_advance_parcel",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L159",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_app_tracking_advance_parcel",
+      "_tgt": "backend_app_tracking_py_post"
+    },
+    {
+      "source": "backend_app_tracking_py_post",
+      "target": "backend_app_tracking_cancel",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L146",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_app_tracking_cancel",
+      "_tgt": "backend_app_tracking_py_post"
+    },
+    {
+      "source": "backend_app_tracking_py_post",
+      "target": "backend_app_tracking_verify_pin",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_app_tracking_verify_pin",
+      "_tgt": "backend_app_tracking_py_post"
+    },
+    {
       "source": "backend_tests_test_booking_py_fixture",
       "target": "backend_tests_test_booking_client",
       "relation": "references",
@@ -12031,13 +16095,26 @@
       "_origin": "ast",
       "_src": "backend_tests_test_locations_client",
       "_tgt": "backend_tests_test_locations_py_fixture"
+    },
+    {
+      "source": "backend_tests_test_tracking_py_fixture",
+      "target": "backend_tests_test_tracking_client",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_tests_test_tracking_client",
+      "_tgt": "backend_tests_test_tracking_py_fixture"
     }
   ],
   "metadata": {
-    "built_at": "2026-11-19T10:05:17.492061+00:00",
+    "built_at": "2026-11-19T10:18:40.982765+00:00",
     "version": "graph_update-v1",
     "codebase_root": "C:\\artifacts-v2\\T0132PcJVCRTV000419112609083214\\developer",
     "force": true,
-    "files_scanned": 32
+    "files_scanned": 44
   }
 }

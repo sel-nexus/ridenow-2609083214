@@ -2,7 +2,7 @@
 import React from 'react';
 import '@testing-library/jest-dom/vitest';
 import { afterEach, expect, it, vi } from 'vitest';
-import { cleanup, render, screen, waitFor } from '@testing-library/react';
+import { act, cleanup, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Tracking from './Tracking';
 
@@ -48,7 +48,8 @@ it('labels delivered parcel proof as simulated', async () => {
   vi.spyOn(globalThis, 'fetch').mockResolvedValue(new Response(JSON.stringify({...initial, booking: parcelBooking, state: 'delivered', progress: 1}), {status: 200}));
   render(<Tracking token="token" booking={parcelBooking} onBack={() => {}} />);
   expect(await screen.findByText('Simulated proof of delivery')).toBeInTheDocument();
-  expect(screen.getByText(/No photograph or real delivery was verified/)).toBeInTheDocument();
+  expect(screen.getByRole('img', {name: /illustration of a parcel at a doorstep/i})).toHaveAttribute('src', '/delivery-illustration.svg');
+  expect(screen.getByText(/Illustration only.*no real delivery.*verified/i)).toBeInTheDocument();
 });
 
 it('offers feedback immediately on completion, saves it, and restores it on remount', async () => {
@@ -69,6 +70,72 @@ it('offers feedback immediately on completion, saves it, and restores it on remo
   view.unmount(); render(<Tracking token="token" booking={booking} onBack={() => {}} />);
   expect(await screen.findByLabelText('Rating')).toHaveValue('4');
   expect(screen.getByLabelText('Polite driver')).toBeChecked();
+});
+
+it.each([true, false])('shares a simulated reference and reports clipboard outcome (success: %s)', async success => {
+  vi.spyOn(globalThis, 'fetch').mockResolvedValue(new Response(JSON.stringify(initial), {status: 200}));
+  const user = userEvent.setup();
+  const writeText = vi.spyOn(navigator.clipboard, 'writeText');
+  if (success) writeText.mockResolvedValue();
+  else writeText.mockRejectedValue(new Error('Permission denied'));
+  render(<Tracking token="token" booking={booking} onBack={() => {}} />);
+  await user.click(await screen.findByRole('button', {name: 'Safety shield'}));
+  await user.click(screen.getByRole('button', {name: 'Share Trip'}));
+  expect(writeText).toHaveBeenCalledWith(`${window.location.origin}/#simulated-trip-ride1`);
+  expect(await screen.findByText(success ? 'Simulated trip reference copied. It is not a live tracking link.' : 'Could not copy the simulated trip reference.')).toBeInTheDocument();
+});
+
+it('shows mock chat and safety actions without claiming real contact', async () => {
+  vi.spyOn(globalThis, 'fetch').mockResolvedValue(new Response(JSON.stringify(initial), {status: 200}));
+  const user = userEvent.setup();
+  render(<Tracking token="token" booking={booking} onBack={() => {}} />);
+  await user.click(await screen.findByRole('button', {name: 'Mock chat'}));
+  expect(screen.getByText('Mock chat · no message is sent.')).toBeInTheDocument();
+  await user.click(screen.getByRole('button', {name: "I'm at the pickup point"}));
+  expect(screen.getByText(/Simulated message: I'm at the pickup point/)).toBeInTheDocument();
+  await user.click(screen.getByRole('button', {name: 'Close chat'}));
+  expect(screen.queryByText('Mock chat · no message is sent.')).not.toBeInTheDocument();
+  await user.click(screen.getByRole('button', {name: 'Safety shield'}));
+  expect(screen.getByText(/Simulated SOS 112 · no emergency service will be contacted/)).toBeInTheDocument();
+  expect(screen.getByText(/Simulated GPS: 17.44000, 78.38000 · TS 09 UA 4821/)).toBeInTheDocument();
+  await user.click(screen.getByRole('button', {name: 'Simulate SOS'}));
+  expect(screen.getByText('SOS simulation only: no emergency service was contacted.')).toBeInTheDocument();
+});
+
+it('raises and acknowledges simulated RideCheck during a trip', async () => {
+  vi.spyOn(globalThis, 'fetch').mockImplementation(() => Promise.resolve(new Response(JSON.stringify({...initial, state: 'in_trip'}), {status: 200})));
+  vi.useFakeTimers();
+  try {
+    render(<Tracking token="token" booking={booking} onBack={() => {}} />);
+    await act(async () => { await vi.advanceTimersByTimeAsync(0); });
+    expect(screen.getByText('Trip in progress')).toBeInTheDocument();
+    await act(async () => { await vi.advanceTimersByTimeAsync(15000); });
+    expect(screen.getByText(/Everything okay on your trip\? \(Simulated RideCheck\)/)).toBeInTheDocument();
+    vi.useRealTimers();
+    const user = userEvent.setup();
+    await user.click(screen.getByRole('button', {name: 'Yes, I’m okay'}));
+    expect(screen.queryByText(/Everything okay on your trip/)).not.toBeInTheDocument();
+    expect(screen.getByText('RideCheck acknowledged.')).toBeInTheDocument();
+  } finally { vi.useRealTimers(); }
+});
+
+it('ignores an older polling response after a newer response', async () => {
+  let resolveOld!: (response: Response) => void;
+  let calls = 0;
+  vi.spyOn(globalThis, 'fetch').mockImplementation(() => {
+    calls += 1;
+    if (calls === 1) return new Promise(resolve => { resolveOld = resolve; });
+    return Promise.resolve(new Response(JSON.stringify({...initial, state: 'in_trip'}), {status: 200}));
+  });
+  vi.useFakeTimers();
+  try {
+    render(<Tracking token="token" booking={booking} onBack={() => {}} />);
+    await act(async () => { await vi.advanceTimersByTimeAsync(1000); });
+    expect(screen.getByText('Trip in progress')).toBeInTheDocument();
+    await act(async () => { resolveOld(new Response(JSON.stringify(initial), {status: 200})); });
+    expect(screen.getByText('Trip in progress')).toBeInTheDocument();
+    expect(screen.queryByText('Driver has arrived')).not.toBeInTheDocument();
+  } finally { vi.useRealTimers(); }
 });
 
 it('reports feedback save failure without claiming it was saved', async () => {

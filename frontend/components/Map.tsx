@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import type { Location } from '../lib/api';
 import type * as Leaflet from 'leaflet';
 
-const bounds: [[number, number], [number, number]] = [[17.2, 78.3], [17.55, 78.7]];
+// Permit centering a pin at the edge of the service area without clipping it.
+const bounds: [[number, number], [number, number]] = [[17.0, 78.1], [17.75, 78.9]];
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
 
 /** Render a draggable destination pin over an interactive Hyderabad map. */
@@ -45,6 +46,18 @@ export default function Map({ location, onSelect }: { location: Location | null;
         marker.setLatLng([point.lat, point.lng]);
         handler.current({name: `Map pin (${point.lat.toFixed(5)}, ${point.lng.toFixed(5)})`, ...point});
       };
+      const markerElement = marker.getElement();
+      markerElement?.setAttribute('role', 'group');
+      markerElement?.setAttribute('aria-label', 'Destination pin. Use arrow keys to move the pin.');
+      markerElement?.addEventListener('keydown', event => {
+        const offsets: Record<string, [number, number]> = {ArrowUp: [.001, 0], ArrowDown: [-.001, 0], ArrowLeft: [0, -.001], ArrowRight: [0, .001]};
+        const offset = offsets[event.key];
+        if (!offset || event.altKey || event.ctrlKey || event.metaKey) return;
+        event.preventDefault();
+        event.stopPropagation();
+        const point = marker.getLatLng();
+        selectPoint(point.lat + offset[0], point.lng + offset[1]);
+      });
       marker.on('dragend', () => { const point = marker.getLatLng(); selectPoint(point.lat, point.lng); });
       instance.on('click', event => selectPoint(event.latlng.lat, event.latlng.lng));
       const car = L.divIcon({className: 'vehicle-icon', html: '<span>◆</span>', iconSize: [20, 20]});

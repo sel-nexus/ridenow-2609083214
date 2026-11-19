@@ -8,12 +8,13 @@ from typing import Annotated, Literal
 from bson import ObjectId
 from bson.errors import InvalidId
 from fastapi import APIRouter, Depends, HTTPException, Request
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 from pymongo.errors import DuplicateKeyError
 from pymongo.asynchronous.database import AsyncDatabase
 
 from app.core import current_user, database
 from app.locations import Location
+from app.text_policy import validate_plain_text
 
 router = APIRouter(prefix='/api/v1/booking', tags=['booking'])
 
@@ -53,6 +54,12 @@ class ParcelInput(BaseModel):
     recipient_phone: str = Field(pattern=r'^\+?[0-9]{10,15}$')
     instructions: str = Field(default='', max_length=500)
     courier_vehicle: Literal['two_wheeler', 'auto_car']
+
+    @field_validator('recipient_name', 'instructions', mode='before')
+    @classmethod
+    def check_plain_text(cls, value: object) -> object:
+        """Reject markup and control characters before whitespace stripping."""
+        return validate_plain_text(value) if isinstance(value, str) else value
 
     @model_validator(mode='after')
     def suitable_vehicle(self) -> 'ParcelInput':

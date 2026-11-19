@@ -61,18 +61,22 @@ async def test_owner_matching_pin_and_completed_ride(client):
     path = '/api/v1/tracking/' + booking['id']
     assert (await http.get(path)).status_code == 401
     assert (await http.get(path, headers=stranger)).status_code == 404
-    initial = (await http.get(path, headers=owner)).json()
+    initial_response = await http.get(path, headers=owner)
+    assert initial_response.status_code == 200
+    initial = initial_response.json()
     assert initial['state'] == 'matching' and 0 <= initial['arrival_seconds'] <= 60
     assert 0 < initial['matching_seconds'] <= 3
     stored = await db.bookings.find_one({'_id': ObjectId(booking['id'])})
     assert stored['tracking']['driver']['plate'].startswith('TS ')
     assert (await http.post(path + '/pin', headers=owner, json={'pin': stored['tracking']['pin']})).status_code == 409
     await arrive(db, booking['id'])
-    arrived = (await http.get(path, headers=owner)).json()
+    arrived_response = await http.get(path, headers=owner)
+    assert arrived_response.status_code == 200
+    arrived = arrived_response.json()
     assert arrived['state'] == 'arrived' and arrived['pin'] == stored['tracking']['pin']
     assert arrived['driver'] == stored['tracking']['driver']
     started = await http.post(path + '/pin', headers=owner, json={'pin': arrived['pin']})
-    assert started.json()['state'] == 'in_trip'
+    assert started.status_code == 200 and started.json()['state'] == 'in_trip'
     assert (await http.post(path + '/pin', headers=owner, json={'pin': arrived['pin']})).status_code == 409
     await db.bookings.update_one({'_id': ObjectId(booking['id'])}, {'$set': {'tracking.started_at': time.time() - 31}})
     assert (await http.get(path, headers=owner)).json()['booking']['status'] == 'completed'
@@ -113,21 +117,53 @@ async def test_parcel_validation_lifecycle_and_confirmation(client):
     await arrive(db, booking['id'])
     arrived = (await http.get(path, headers=owner)).json()
     assert (await http.post(path + '/pin', headers=owner, json={'pin': 'xx'})).status_code == 422
-    assert (await http.post(path + '/pin', headers=owner, json={'pin': arrived['pin']})).json()['state'] == 'collected'
-    assert (await http.post(path + '/parcel/transit', headers=owner)).json()['state'] == 'transit'
+    collected = await http.post(path + '/pin', headers=owner, json={'pin': arrived['pin']})
+    assert collected.status_code == 200 and collected.json()['state'] == 'collected'
+    transit = await http.post(path + '/parcel/transit', headers=owner)
+    assert transit.status_code == 200 and transit.json()['state'] == 'transit'
     assert (await http.post(path + '/parcel/transit', headers=owner)).status_code == 409
-    delivered = (await http.post(path + '/parcel/deliver', headers=owner)).json()
-    assert delivered['state'] == 'delivered' and delivered['booking']['status'] == 'completed'
+    delivered = await http.post(path + '/parcel/deliver', headers=owner)
+    assert delivered.status_code == 200 and delivered.json()['state'] == 'delivered' and delivered.json()['booking']['status'] == 'completed'
+    reread = await http.get(path, headers=owner)
+    assert reread.status_code == 200 and reread.json()['state'] == 'delivered'
+    stored = await db.bookings.find_one({'_id': ObjectId(booking['id'])})
+    assert stored['status'] == 'completed' and stored['tracking']['state'] == 'delivered'
 
 
 async def test_confirmed_cancellation_is_terminal(client):
     """Require confirmation and prevent cancellation or starting from being replayed."""
-    http, _ = client
+    http, db = client
     owner = await login(http)
     booking = (await book(http, owner)).json()
     path = '/api/v1/tracking/' + booking['id']
     assert (await http.post(path + '/cancel', headers=owner, json={})).status_code == 422
     cancelled = await http.post(path + '/cancel', headers=owner, json={'confirmed': True})
     assert cancelled.status_code == 200 and cancelled.json()['state'] == 'cancelled'
+    before = await db.bookings.find_one({'_id': ObjectId(booking['id'])})
+    profile = await http.get('/api/v1/identity/profile', headers=owner)
+    assert profile.status_code == 200
+    assert before['owner'] == ObjectId(profile.json()['id'])
+    assert before['status'] == 'cancelled' and before['tracking']['state'] == 'cancelled'
     assert (await http.post(path + '/cancel', headers=owner, json={'confirmed': True})).status_code == 409
     assert (await http.post(path + '/pin', headers=owner, json={'pin': '1234'})).status_code == 409
+    assert await db.bookings.find_one({'_id': ObjectId(booking['id'])}) == before
+    reread = await http.get(path, headers=owner)
+    assert reread.status_code == 200 and reread.json()['state'] == 'cancelled'
+
+
+async def test_tracking_rejects_missing_invalid_and_foreign_operations(client):
+    http, db = client
+    owner, stranger = await login(http), await login(http)
+    created = await book(http, owner)
+    assert created.status_code == 201
+    path = '/api/v1/tracking/' + created.json()['id']
+    for suffix, body in [('/pin', {}), ('/pin', {'pin': {'$ne': ''}}),
+                         ('/pin', {'pin': '1' * 500}), ('/cancel', {}), ('/cancel', {'confirmed': False})]:
+        assert (await http.post(path + suffix, headers=owner, json=body)).status_code == 422
+    assert (await http.get('/api/v1/tracking/invalid', headers=owner)).status_code == 404
+    assert (await http.get('/api/v1/tracking/' + str(ObjectId()), headers=owner)).status_code == 404
+    assert (await http.post(path + '/pin', headers=stranger, json={'pin': '1234'})).status_code == 404
+    assert (await http.post(path + '/parcel/transit', headers=stranger)).status_code == 404
+    assert (await http.post(path + '/parcel/bogus', headers=owner)).status_code == 422
+    stored = await db.bookings.find_one({'_id': ObjectId(created.json()['id'])})
+    assert stored['status'] == 'confirmed' and 'tracking' not in stored

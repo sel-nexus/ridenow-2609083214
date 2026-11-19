@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('guest books a ride and completes the simulated PIN journey', async ({ page }) => {
-  test.setTimeout(120000);
+  test.setTimeout(180000);
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
@@ -12,7 +12,11 @@ test('guest books a ride and completes the simulated PIN journey', async ({ page
   await page.getByRole('button', {name: /Rajiv Gandhi International Airport/}).click();
   await page.getByRole('button', {name: 'Compare rides'}).click();
   await page.getByRole('radio', {name: /Bike/}).check();
+  const booked = page.waitForResponse(r => r.url().endsWith('/booking/rides') && r.request().method() === 'POST');
   await page.getByRole('button', {name: /Confirm simulated booking/}).click();
+  const bookingResponse = await booked;
+  expect(bookingResponse.status()).toBe(201);
+  const booking = await bookingResponse.json();
   await page.getByRole('button', {name: 'Track Your Ride'}).click();
   await expect(page.getByText('Driver has arrived')).toBeVisible({timeout: 70000});
   const pin = await page.locator('.tracking-pin').textContent();
@@ -23,6 +27,33 @@ test('guest books a ride and completes the simulated PIN journey', async ({ page
   await page.getByRole('button', {name: /Safety/}).click();
   await expect(page.getByText(/no emergency service will be contacted/)).toBeVisible();
   await expect(page.getByText('Trip completed')).toBeVisible({timeout: 40000});
+  await page.getByLabel('Rating').selectOption('4');
+  await page.getByLabel('Clean vehicle').check();
+  await page.getByRole('button', {name: '₹20.00'}).click();
+  const feedback = page.waitForResponse(r => r.url().endsWith(`/activity/history/${booking.id}/feedback`) && r.request().method() === 'PUT');
+  await page.getByRole('button', {name: 'Save feedback'}).click();
+  const savedFeedback = await feedback;
+  expect(savedFeedback.status()).toBe(200);
+  expect(await savedFeedback.json()).toMatchObject({rating: 4, compliments: ['Clean vehicle'], tip_paise: 2000});
+  await expect(page.getByText('Feedback saved. The tip is simulated; no payment was made.')).toBeVisible();
+  await page.getByRole('link', {name: 'View receipt and leave feedback'}).click();
+  await page.getByRole('button', {name: 'View receipt'}).click();
+  const receipt = page.locator('section').filter({has: page.getByRole('heading', {name: /Receipt ·/})});
+  await expect(receipt).toContainText(booking.pickup.name);
+  await expect(receipt).toContainText(booking.destination.name);
+  await expect(receipt).toContainText(`₹${booking.vehicle.fare.toFixed(2)}`);
+  await expect(receipt.getByLabel('Rating')).toHaveValue('4');
+  await expect(receipt.getByLabel('Clean vehicle')).toBeChecked();
+  await expect(receipt.getByLabel('Simulated tip (₹)')).toHaveValue('20');
+  await page.reload();
+  await page.getByRole('button', {name: 'View receipt'}).click();
+  await expect(receipt.getByLabel('Rating')).toHaveValue('4');
+  await expect(receipt.getByLabel('Clean vehicle')).toBeChecked();
+  await receipt.getByRole('button', {name: 'Rebook This Ride'}).click();
+  await expect(page.getByRole('heading', {name: 'Choose a ride'})).toBeVisible();
+  await expect(page.locator('.booking-panel')).toContainText(booking.pickup.name);
+  await expect(page.locator('.booking-panel')).toContainText(booking.destination.name);
+  await page.screenshot({path: test.info().outputPath('desktop-rebook.png'), fullPage: true});
   expect(errors).toEqual([]);
 });
 
@@ -30,6 +61,7 @@ test('guest books a parcel and follows every delivery stage', async ({ page }) =
   test.setTimeout(120000);
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
+  page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
   await page.goto('/');
   await page.getByRole('button', {name: 'Continue as guest'}).click();
   await page.getByRole('button', {name: 'Go to Home'}).click();
@@ -52,6 +84,13 @@ test('guest books a parcel and follows every delivery stage', async ({ page }) =
   await page.getByRole('button', {name: 'Simulate transit'}).click();
   await expect(page.getByRole('status').filter({hasText: 'In Transit'})).toBeVisible();
   await page.getByRole('button', {name: 'Simulate delivery'}).click();
-  await expect(page.getByText('Simulated proof of delivery')).toBeVisible();
+  const proof = page.locator('figure').filter({hasText: 'Simulated proof of delivery'});
+  await expect(proof).toBeVisible();
+  const illustration = proof.getByRole('img', {name: 'Illustration of a parcel at a doorstep'});
+  await expect(illustration).toBeVisible();
+  await expect(illustration).toHaveAttribute('src', '/delivery-illustration.svg');
+  await expect.poll(() => illustration.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
+  await expect(proof).toContainText('Illustration only — no real delivery or photograph was verified.');
+  await page.screenshot({path: test.info().outputPath('parcel-proof.png'), fullPage: true});
   expect(errors).toEqual([]);
 });

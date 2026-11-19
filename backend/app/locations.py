@@ -4,10 +4,11 @@ from typing import Annotated
 from bson import ObjectId
 from bson.errors import InvalidId
 from fastapi import APIRouter, Depends, HTTPException, Query, Request
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 from pymongo.asynchronous.database import AsyncDatabase
 
 from app.core import current_user, database
+from app.text_policy import validate_plain_text
 
 router = APIRouter(prefix='/api/v1/locations', tags=['locations'])
 
@@ -64,20 +65,42 @@ _DATA = [
 
 class Location(BaseModel):
     """Represent a named point within the Hyderabad metro area."""
-    model_config = ConfigDict(extra='forbid', str_strip_whitespace=True, allow_inf_nan=False)
+    model_config = ConfigDict(extra='forbid', allow_inf_nan=False)
     name: str = Field(min_length=1, max_length=150)
     lat: float = Field(ge=17.20, le=17.55)
     lng: float = Field(ge=78.30, le=78.70)
 
+    @field_validator('name')
+    @classmethod
+    def check_name(cls, value: str) -> str:
+        """Reject markup, control characters and blank location names."""
+        validate_plain_text(value)
+        if not value.strip():
+            raise ValueError('Location name must not be blank')
+        return value
+
 
 class SavedInput(Location):
     """Validate a place label and its destination."""
-    label: str = Field(min_length=1, max_length=40, pattern=r'^[\w .-]+$')
+    label: str = Field(min_length=1, max_length=40)
+
+    @field_validator('label')
+    @classmethod
+    def check_label(cls, value: str) -> str:
+        """Reject markup, control characters and blank labels."""
+        validate_plain_text(value)
+        if not value.strip():
+            raise ValueError('Label must not be blank')
+        return value
 
 
-class SavedPlace(SavedInput):
-    """Expose a saved place without its owner identifier."""
+class SavedPlace(BaseModel):
+    """Expose saved data, including legacy text, without its owner identifier."""
     id: str
+    label: str
+    name: str
+    lat: float
+    lng: float
 
 
 class SavedRepository:
