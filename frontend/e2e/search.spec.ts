@@ -1,0 +1,33 @@
+import { test, expect } from '@playwright/test';
+
+test('guest searches, saves a Hyderabad place and sees it after refresh', async ({ page, request }) => {
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+  await page.goto('/');
+  const entry = page.waitForResponse(response => response.url().endsWith('/api/v1/identity/enter') && response.request().method() === 'POST');
+  await page.getByRole('button', {name: 'Continue as guest'}).click();
+  const session = await (await entry).json();
+  await page.getByRole('button', {name: 'Go to Home'}).click();
+  const searchResponse = page.waitForResponse(response => response.url().includes('/api/v1/locations/search?q=RGIA') && response.status() === 200);
+  await page.getByLabel('Search Hyderabad').fill('RGIA');
+  const search = await searchResponse;
+  const result = (await search.json()).items[0];
+  expect(result.lat).toBe(17.2403);
+  await page.getByRole('button', {name: /Rajiv Gandhi International Airport/}).click();
+  await expect(page.getByText('17.24030, 78.42940')).toBeVisible();
+  await page.getByLabel('Save as').fill('Airport');
+  const saved = page.waitForResponse(response => response.url().endsWith('/api/v1/locations/saved') && response.request().method() === 'PUT');
+  await page.getByRole('button', {name: 'Save place'}).click();
+  expect((await saved).status()).toBe(200);
+  const persisted = await request.get('/api/v1/locations/saved', {headers: {Authorization: `Bearer ${session.token}`}});
+  expect((await persisted.json()).items).toEqual(expect.arrayContaining([expect.objectContaining({label: 'Airport', lat: 17.2403})]));
+  expect((await request.get('/api/v1/locations/saved')).status()).toBe(401);
+  await page.reload();
+  await page.getByRole('button', {name: 'Go to Home'}).click();
+  await expect(page.getByRole('button', {name: /Airport.*Rajiv Gandhi/})).toBeVisible();
+  await expect(page.getByText('Recent searches')).toBeVisible();
+  await page.getByRole('button', {name: 'Remove Airport'}).click();
+  await expect(page.getByText('Airport removed.')).toBeVisible();
+  expect(errors).toEqual([]);
+});

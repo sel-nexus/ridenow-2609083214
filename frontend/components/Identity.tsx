@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, type FormEvent } from 'react';
 import { api, type Profile, type Session } from '../lib/api';
+import Search from './Search';
 
 const SESSION_KEY = 'ridenow_session';
 type Method = 'google' | 'apple' | 'guest';
@@ -9,6 +10,7 @@ type Method = 'google' | 'apple' | 'guest';
 /** Present explicitly simulated entry and an editable persisted profile. */
 export default function Identity() {
   const [token, setToken] = useState('');
+  const [showHome, setShowHome] = useState(false);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [restoring, setRestoring] = useState(true);
   const [busy, setBusy] = useState(false);
@@ -60,12 +62,14 @@ export default function Identity() {
     reader.readAsDataURL(file);
   }
   if (restoring) return <main className="loading" role="status">Restoring your session…</main>;
+  if (profile && showHome) return <Search token={token} onAccount={() => setShowHome(false)} />;
   return <main className="page">
     <header className="topbar"><span className="brand">RideNow<span className="brand-dot">.</span></span><span className="location">HYDERABAD, INDIA</span></header>
     <div className="layout"><section className="intro" aria-labelledby="intro-title"><div className="eyebrow"><span className="live-dot"/> YOUR CITY, IN MOTION</div><h1 id="intro-title">A little closer<br/>to <em>everywhere.</em></h1><p>From the everyday to the extraordinary. Your Hyderabad journey starts here.</p><div className="route-art" aria-hidden="true"><div className="route-line"/><span className="route-start"/><span className="route-end"/><span className="route-label start">HITEC CITY</span><span className="route-label end">YOUR NEXT STOP</span></div><p className="simulation">A mobility simulation. No rides, messages or payments are real.</p></section>
     <section className="card" aria-label={profile ? 'Your profile' : 'Get started'}>
       {error && <div className="alert" role="alert">{error}</div>}{notice && <div className="notice" role="status">{notice}</div>}
       {profile ? <><div className="card-kicker">YOUR RIDER PROFILE</div><h2>Good to see you,<br/>{profile.first_name}.</h2><div className="profile-summary">{profile.photo ? <img src={profile.photo} alt="Profile" /> : <span className="avatar" aria-hidden="true">{profile.first_name.charAt(0).toUpperCase()}</span>}<div><strong>{profile.first_name} {profile.last_name}</strong><span className="rating">★ {profile.rating.toFixed(2)} rider rating · {profile.method} demo</span></div></div>
+        <button className="primary" type="button" onClick={() => setShowHome(true)}>Go to Home <span aria-hidden="true">→</span></button>
         <form onSubmit={(e: FormEvent) => { e.preventDefault(); void perform(async () => { const {first_name, last_name, phone: p, email, photo} = profile; const updated = await api<Profile>('/profile', {method: 'PUT', body: JSON.stringify({first_name, last_name, phone: p, email, photo})}, token); setProfile(updated); setNotice('Profile saved.'); }); }}>
           <div className="field-row"><label>First name<input required maxLength={60} value={profile.first_name} onChange={e => change('first_name', e.target.value)} /></label><label>Last name<input maxLength={60} value={profile.last_name} onChange={e => change('last_name', e.target.value)} /></label></div>
           <label>Phone <span className="hint">international format</span><input type="tel" value={profile.phone} onChange={e => change('phone', e.target.value)} placeholder="+919876543210" /></label>
