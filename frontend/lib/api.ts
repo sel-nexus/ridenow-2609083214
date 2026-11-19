@@ -5,7 +5,9 @@ export type SavedPlace = Location & { id: string; label: string };
 export type LocationPage<T> = { items: T[]; total: number };
 export type VehicleQuote = { id: string; name: string; seats: number | null; tier_fee: number; eta_minutes: number; base_fare: number; original_fare: number; fare: number };
 export type Quote = { id: string; pickup: Location; destination: Location; distance_km: number; surge_multiplier: number; vehicles: VehicleQuote[] };
-export type RideBooking = { id: string; quote_id: string; pickup: Location; destination: Location; distance_km: number; surge_multiplier: number; vehicle: VehicleQuote; payment: string; status: string; created_at: string };
+export type Parcel = { package_type: 'document' | 'small_box' | 'medium_box' | 'fragile'; recipient_name: string; recipient_phone: string; instructions: string; courier_vehicle: 'two_wheeler' | 'auto_car' };
+export type RideBooking = { id: string; quote_id: string; pickup: Location; destination: Location; distance_km: number; surge_multiplier: number; vehicle: VehicleQuote; payment: string; status: string; created_at: string; parcel: Parcel | null };
+export type TrackingState = { booking: RideBooking; state: string; driver: { name: string; rating: number; trips: number; model: string; plate: string } | null; pin: string | null; attempts: number; arrival_seconds: number; seconds_to_arrival: number; matching_seconds: number; progress: number };
 
 /** Call the same-origin Next proxy and surface safe API errors. */
 export async function api<T>(path: string, options: RequestInit = {}, token?: string, namespace = 'identity'): Promise<T> {

@@ -8,7 +8,7 @@ from typing import Annotated, Literal
 from bson import ObjectId
 from bson.errors import InvalidId
 from fastapi import APIRouter, Depends, HTTPException, Request
-from pydantic import BaseModel, ConfigDict, model_validator
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 from pymongo.errors import DuplicateKeyError
 from pymongo.asynchronous.database import AsyncDatabase
 
@@ -45,12 +45,37 @@ class QuoteInput(BaseModel):
         return self
 
 
+class ParcelInput(BaseModel):
+    """Capture the delivery details needed for a simulated parcel."""
+    model_config = ConfigDict(extra='forbid', str_strip_whitespace=True)
+    package_type: Literal['document', 'small_box', 'medium_box', 'fragile']
+    recipient_name: str = Field(min_length=1, max_length=100)
+    recipient_phone: str = Field(pattern=r'^\+?[0-9]{10,15}$')
+    instructions: str = Field(default='', max_length=500)
+    courier_vehicle: Literal['two_wheeler', 'auto_car']
+
+    @model_validator(mode='after')
+    def suitable_vehicle(self) -> 'ParcelInput':
+        """Keep larger boxes off two-wheelers."""
+        if self.package_type == 'medium_box' and self.courier_vehicle != 'auto_car':
+            raise ValueError('Medium boxes require Auto/Car')
+        return self
+
+
 class BookingInput(BaseModel):
     """Accept only a server quote reference and validated selections."""
     model_config = ConfigDict(extra='forbid')
     quote_id: str
     vehicle: Vehicle
     payment: Payment
+    parcel: ParcelInput | None = None
+
+    @model_validator(mode='after')
+    def parcel_details(self) -> 'BookingInput':
+        """Require parcel details only for parcel bookings."""
+        if (self.vehicle == 'parcel') != (self.parcel is not None):
+            raise ValueError('Parcel details are required only for parcel bookings')
+        return self
 
 
 def road_distance(pickup: Location, destination: Location) -> float:
@@ -120,7 +145,7 @@ def public_booking(doc: dict) -> dict:
     return {'id': str(doc['_id']), 'quote_id': str(doc['quote_id']), 'pickup': doc['pickup'],
             'destination': doc['destination'], 'distance_km': doc['distance_km'],
             'surge_multiplier': doc['surge_multiplier'], 'vehicle': doc['vehicle'],
-            'payment': doc['payment'], 'status': doc['status'],
+            'payment': doc['payment'], 'status': doc['status'], 'parcel': doc.get('parcel'),
             'created_at': doc['created_at'].replace(tzinfo=timezone.utc).isoformat(timespec='milliseconds').replace('+00:00', 'Z')}
 
 
@@ -150,7 +175,8 @@ async def create_ride(payload: BookingInput, request: Request, user: Annotated[d
     doc = {'owner': user['_id'], 'quote_id': quote['_id'], 'pickup': calculated['pickup'],
            'destination': calculated['destination'], 'distance_km': calculated['distance_km'],
            'surge_multiplier': calculated['surge_multiplier'], 'vehicle': vehicle,
-           'payment': payload.payment, 'status': 'confirmed', 'created_at': datetime.now(timezone.utc)}
+           'payment': payload.payment, 'parcel': payload.parcel.model_dump() if payload.parcel else None,
+           'status': 'confirmed', 'created_at': datetime.now(timezone.utc)}
     try:
         return public_booking(await repo.create_booking(doc))
     except DuplicateKeyError:

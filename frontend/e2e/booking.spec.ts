@@ -32,6 +32,6 @@ test('guest compares live fares and saves a simulated cash booking', async ({ pa
   expect(await persisted.json()).toEqual(ride);
   expect((await request.get(`/api/v1/booking/rides/${ride.id}`)).status()).toBe(401);
   await page.getByRole('button', {name: 'Track Your Ride'}).click();
-  await expect(page.getByText(/Tracking is not available yet/)).toBeVisible();
+  await expect(page.getByRole('heading', {name: 'Track your ride'})).toBeVisible();
   expect(errors).toEqual([]);
 });

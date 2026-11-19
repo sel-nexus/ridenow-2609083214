@@ -1,0 +1,57 @@
+import { test, expect } from '@playwright/test';
+
+test('guest books a ride and completes the simulated PIN journey', async ({ page }) => {
+  test.setTimeout(120000);
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+  await page.goto('/');
+  await page.getByRole('button', {name: 'Continue as guest'}).click();
+  await page.getByRole('button', {name: 'Go to Home'}).click();
+  await page.getByLabel('Search Hyderabad').fill('RGIA');
+  await page.getByRole('button', {name: /Rajiv Gandhi International Airport/}).click();
+  await page.getByRole('button', {name: 'Compare rides'}).click();
+  await page.getByRole('radio', {name: /Bike/}).check();
+  await page.getByRole('button', {name: /Confirm simulated booking/}).click();
+  await page.getByRole('button', {name: 'Track Your Ride'}).click();
+  await expect(page.getByText('Driver has arrived')).toBeVisible({timeout: 70000});
+  const pin = await page.locator('.tracking-pin').textContent();
+  expect(pin).toMatch(/^\d{4}$/);
+  await page.getByLabel(/Enter safety PIN/).fill(pin!);
+  await page.getByRole('button', {name: 'Start Trip'}).click();
+  await expect(page.getByText('Trip in progress')).toBeVisible();
+  await page.getByRole('button', {name: /Safety/}).click();
+  await expect(page.getByText(/no emergency service will be contacted/)).toBeVisible();
+  await expect(page.getByText('Trip completed')).toBeVisible({timeout: 40000});
+  expect(errors).toEqual([]);
+});
+
+test('guest books a parcel and follows every delivery stage', async ({ page }) => {
+  test.setTimeout(120000);
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.goto('/');
+  await page.getByRole('button', {name: 'Continue as guest'}).click();
+  await page.getByRole('button', {name: 'Go to Home'}).click();
+  await page.getByLabel('Search Hyderabad').fill('RGIA');
+  await page.getByRole('button', {name: /Rajiv Gandhi International Airport/}).click();
+  await page.getByRole('button', {name: 'Compare rides'}).click();
+  await page.getByRole('radio', {name: /Parcel/}).check();
+  await page.getByLabel('Package type').selectOption('medium_box');
+  await expect(page.getByLabel('Courier vehicle')).toHaveValue('auto_car');
+  await page.getByLabel('Recipient name').fill('Test Recipient');
+  await page.getByLabel('Recipient phone').fill('9876543210');
+  await page.getByLabel(/instructions/).fill('Handle carefully');
+  await page.getByRole('button', {name: /Confirm simulated booking/}).click();
+  await page.getByRole('button', {name: 'Track Your Ride'}).click();
+  await expect(page.getByText('Driver has arrived')).toBeVisible({timeout: 70000});
+  const pin = await page.locator('.tracking-pin').textContent();
+  await page.getByLabel(/Enter safety PIN/).fill(pin!);
+  await page.getByRole('button', {name: 'Verify and collect'}).click();
+  await expect(page.getByRole('status').filter({hasText: 'Package Collected'})).toBeVisible();
+  await page.getByRole('button', {name: 'Simulate transit'}).click();
+  await expect(page.getByRole('status').filter({hasText: 'In Transit'})).toBeVisible();
+  await page.getByRole('button', {name: 'Simulate delivery'}).click();
+  await expect(page.getByText('Simulated proof of delivery')).toBeVisible();
+  expect(errors).toEqual([]);
+});

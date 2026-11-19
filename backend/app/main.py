@@ -9,6 +9,7 @@ from pymongo import AsyncMongoClient
 from app.identity import router
 from app.locations import router as locations_router
 from app.booking import router as booking_router
+from app.tracking import router as tracking_router
 
 
 class Settings(BaseSettings):
@@ -43,6 +44,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(router)
     app.include_router(locations_router)
     app.include_router(booking_router)
+    app.include_router(tracking_router)
 
     @app.get("/api/health")
     async def health() -> dict[str, str]:

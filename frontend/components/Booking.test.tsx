@@ -16,6 +16,7 @@ afterEach(() => {cleanup(); vi.restoreAllMocks();});
 it('discloses surge and simulated cash and shows the persisted confirmation', async () => {
   const fetcher = vi.spyOn(globalThis, 'fetch').mockImplementation((url, init) => String(url).endsWith('/quotes')
     ? response(quote, 201)
+    : String(url).includes('/tracking/') ? response({booking: {id: 'ride1', pickup, destination, vehicle}, state: 'matching', driver: null, pin: null, attempts: 0, arrival_seconds: 10, seconds_to_arrival: 10, matching_seconds: 2, progress: 0})
     : response({id: 'ride1', quote_id: 'q1', pickup, destination, vehicle, payment: 'cash', status: 'confirmed', distance_km: 17, surge_multiplier: 1.1}, 201));
   const user = userEvent.setup();
   render(<Booking token="secret" destination={destination} onBack={() => {}} />);
@@ -29,7 +30,7 @@ it('discloses surge and simulated cash and shows the persisted confirmation', as
   expect(JSON.parse(String(call?.[1]?.body))).toEqual({quote_id: 'q1', vehicle: 'bike', payment: 'cash'});
   expect(new Headers(call?.[1]?.headers).get('Authorization')).toBe('Bearer secret');
   await user.click(screen.getByRole('button', {name: 'Track Your Ride'}));
-  expect(screen.getByText(/Tracking is not available yet/)).toBeInTheDocument();
+  expect(await screen.findByText(/Finding your nearest driver/)).toBeInTheDocument();
 });
 
 it('offers retry after a quote error and shows booking errors without confirmation', async () => {
