@@ -20,6 +20,8 @@ export default function Search({ token, onAccount }: { token: string; onAccount:
   const [recent, setRecent] = useState<Location[]>([]);
   const [selected, setSelected] = useState<Location | null>(null);
   const [bookingDestination, setBookingDestination] = useState<Location | null>(null);
+  const [bookingPickup, setBookingPickup] = useState<Location | undefined>();
+  const [initialVehicle, setInitialVehicle] = useState<'bike' | 'parcel'>('bike');
   const [label, setLabel] = useState('Home');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -27,6 +29,20 @@ export default function Search({ token, onAccount }: { token: string; onAccount:
   const [savedError, setSavedError] = useState('');
   const [notice, setNotice] = useState('');
   const [retry, setRetry] = useState(0);
+
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get('service') === 'parcel') setInitialVehicle('parcel');
+    try {
+      const stored = localStorage.getItem('ridenow_rebook');
+      if (stored) {
+        const route = JSON.parse(stored) as { token: string; pickup: Location; destination: Location };
+        const valid = (p: Location) => typeof p?.name === 'string' && p.name.trim().length > 0 && typeof p.lat === 'number' && Number.isFinite(p.lat) && p.lat >= 17.2 && p.lat <= 17.55 && typeof p.lng === 'number' && Number.isFinite(p.lng) && p.lng >= 78.3 && p.lng <= 78.7;
+        if (route.token !== token || !valid(route.pickup) || !valid(route.destination)) throw new Error('Invalid route');
+        setBookingPickup(route.pickup); setBookingDestination(route.destination); setSelected(route.destination);
+        localStorage.removeItem('ridenow_rebook');
+      }
+    } catch { try { localStorage.removeItem('ridenow_rebook'); } catch { /* Storage is unavailable. */ } setNotice('The saved rebook route could not be read.'); }
+  }, [token]);
 
   useEffect(() => {
     try {
@@ -82,7 +98,7 @@ export default function Search({ token, onAccount }: { token: string; onAccount:
   return <main className="home-shell">
     <header className="home-header"><span className="brand">RideNow<span className="brand-dot">.</span></span><span>HYDERABAD</span><button onClick={onAccount}>Account &amp; profile</button></header>
     <Map location={selected} onSelect={select} />
-    {bookingDestination ? <div className="search-panel"><Booking token={token} destination={bookingDestination} onBack={() => setBookingDestination(null)} /></div> : <section className="search-panel" aria-labelledby="where-title">
+    {bookingDestination ? <div className="search-panel"><Booking token={token} destination={bookingDestination} pickup={bookingPickup} initialVehicle={initialVehicle} onBack={() => {setBookingDestination(null); setBookingPickup(undefined);}} /></div> : <section className="search-panel" aria-labelledby="where-title">
       <div className="card-kicker">YOUR CITY, IN MOTION</div><h1 id="where-title">Where to?</h1>
       <label htmlFor="destination">Search Hyderabad</label><input id="destination" autoComplete="off" placeholder="Search a place or landmark" value={query} onChange={e => setQuery(e.target.value)} />
       {loading && <p role="status">Searching locations…</p>}

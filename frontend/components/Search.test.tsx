@@ -42,4 +42,35 @@ describe('Hyderabad search', () => {
     await user.click(screen.getByRole('button', {name: 'Select map pin'}));
     expect(screen.getByText('17.44000, 78.38000')).toBeInTheDocument();
   });
+
+  it('preselects parcel after navigation and retains it while choosing a destination', async () => {
+    window.history.replaceState({}, '', '/?service=parcel');
+    const parcel = {id: 'parcel', name: 'Parcel', seats: null, tier_fee: 0, eta_minutes: 3, base_fare: 30, original_fare: 30, fare: 30};
+    vi.spyOn(globalThis, 'fetch').mockImplementation((url) => String(url).includes('/quotes')
+      ? response({id: 'q', pickup: {name: 'Pickup', lat: 17.44, lng: 78.38}, destination: airport, distance_km: 20, surge_multiplier: 1, vehicles: [parcel]})
+      : String(url).includes('/saved') ? response({items: [], total: 0}) : response({items: [airport], total: 1}));
+    const user = userEvent.setup(); render(<Search token="secret" onAccount={() => {}} />);
+    await user.click(await screen.findByRole('button', {name: /Rajiv Gandhi International Airport/i}));
+    await user.click(screen.getByRole('button', {name: 'Compare rides'}));
+    expect(await screen.findByRole('radio', {name: /Parcel/})).toBeChecked();
+    expect(screen.getByLabelText('Recipient name')).toBeInTheDocument();
+    window.history.replaceState({}, '', '/');
+  });
+
+  it('rebooks valid stored routes and rejects malformed route coordinates', async () => {
+    const pickup = {name: 'Cyber Towers', lat: 17.45, lng: 78.38};
+    const bike = {id: 'bike', name: 'Bike', seats: 1, tier_fee: 0, eta_minutes: 3, base_fare: 30, original_fare: 30, fare: 30};
+    const fetcher = vi.spyOn(globalThis, 'fetch').mockImplementation(url => String(url).includes('/quotes')
+      ? response({id: 'q', pickup, destination: airport, distance_km: 20, surge_multiplier: 1, vehicles: [bike]})
+      : response({items: [], total: 0}));
+    localStorage.setItem('ridenow_rebook', JSON.stringify({token: 'secret', pickup, destination: airport}));
+    const view = render(<Search token="secret" onAccount={() => {}} />);
+    expect(await screen.findByText('Choose a ride')).toBeInTheDocument();
+    await waitFor(() => expect(fetcher.mock.calls.some(([url, init]) => String(url).includes('/quotes') && JSON.parse(String(init?.body)).pickup.name === 'Cyber Towers')).toBe(true));
+    expect(localStorage.getItem('ridenow_rebook')).toBeNull();
+    view.unmount(); localStorage.setItem('ridenow_rebook', JSON.stringify({token: 'secret', pickup: {name: 'bad'}, destination: airport}));
+    render(<Search token="secret" onAccount={() => {}} />);
+    expect(await screen.findByText('The saved rebook route could not be read.')).toBeInTheDocument();
+    expect(localStorage.getItem('ridenow_rebook')).toBeNull();
+  });
 });

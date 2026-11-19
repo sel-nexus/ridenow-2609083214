@@ -25,7 +25,7 @@ export default function Identity() {
   useEffect(() => {
     const stored = localStorage.getItem(SESSION_KEY);
     if (!stored) { setRestoring(false); return; }
-    api<Profile>('/profile', {}, stored).then(p => { setToken(stored); setProfile(p); }).catch((e: Error) => { setError(e.message); }).finally(() => setRestoring(false));
+    api<Profile>('/profile', {}, stored).then(p => { setToken(stored); setProfile(p); if (localStorage.getItem('ridenow_rebook') || new URLSearchParams(window.location.search).get('service') === 'parcel') setShowHome(true); }).catch((e: Error) => { setError(e.message); }).finally(() => setRestoring(false));
   }, []);
   useEffect(() => {
     if (!seconds) return;
@@ -40,6 +40,7 @@ export default function Identity() {
   }
   function accept(session: Session) {
     localStorage.setItem(SESSION_KEY, session.token); setToken(session.token); setProfile(session.profile); setChallenge('');
+    if (new URLSearchParams(window.location.search).get('service') === 'parcel' || localStorage.getItem('ridenow_rebook')) setShowHome(true);
   }
   async function start() {
     const digits = phone.replace(/[\s()-]/g, '');

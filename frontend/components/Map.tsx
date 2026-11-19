@@ -25,10 +25,13 @@ export default function Map({ location, onSelect }: { location: Location | null;
       if (disposed || !container.current) return;
       const instance = L.map(container.current, { maxBounds: bounds, maxBoundsViscosity: 1 }).setView([17.4435, 78.3772], 13);
       map.current = instance;
-      const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const dark = document.documentElement.dataset.theme === 'dark';
       const tiles = L.tileLayer(dark ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png' : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: dark ? '&copy; OpenStreetMap contributors &copy; CARTO' : '&copy; OpenStreetMap contributors', maxZoom: 19
       }).addTo(instance);
+      const updateTheme = () => { const isDark = document.documentElement.dataset.theme === 'dark'; tiles.setUrl(isDark ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png' : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'); };
+      window.addEventListener('ridenow-resolved-theme', updateTheme);
+      instance.once('unload', () => window.removeEventListener('ridenow-resolved-theme', updateTheme));
       let tileFailures = 0;
       tiles.on('tileerror', () => { if (++tileFailures >= 3) setError('Map tiles could not load. Search and coordinates are still available.'); });
       const pickup = L.divIcon({className: 'pickup-icon', html: '<span></span>', iconSize: [24, 24]});

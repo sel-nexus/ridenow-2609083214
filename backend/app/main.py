@@ -10,6 +10,7 @@ from app.identity import router
 from app.locations import router as locations_router
 from app.booking import router as booking_router
 from app.tracking import router as tracking_router
+from app.activity import router as activity_router
 
 
 class Settings(BaseSettings):
@@ -35,6 +36,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             await app.state.db.challenges.create_index("expires_at", expireAfterSeconds=0)
             await app.state.db.saved_locations.create_index([('owner', 1), ('label_key', 1)], unique=True)
             await app.state.db.bookings.create_index('quote_id', unique=True)
+            await app.state.db.bookings.create_index([('owner', 1), ('status', 1), ('_id', -1)])
+            await app.state.db.schedules.create_index([('owner', 1), ('status', 1), ('scheduled_at', 1)])
             yield
         finally:
             await client.close()
@@ -45,6 +48,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(locations_router)
     app.include_router(booking_router)
     app.include_router(tracking_router)
+    app.include_router(activity_router)
 
     @app.get("/api/health")
     async def health() -> dict[str, str]:

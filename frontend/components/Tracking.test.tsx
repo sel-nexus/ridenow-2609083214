@@ -50,3 +50,35 @@ it('labels delivered parcel proof as simulated', async () => {
   expect(await screen.findByText('Simulated proof of delivery')).toBeInTheDocument();
   expect(screen.getByText(/No photograph or real delivery was verified/)).toBeInTheDocument();
 });
+
+it('offers feedback immediately on completion, saves it, and restores it on remount', async () => {
+  let feedback: {rating: number; compliments: string[]; tip_paise: number} | null = null;
+  vi.spyOn(globalThis, 'fetch').mockImplementation((url, init) => {
+    if (String(url).endsWith('/feedback')) { feedback = JSON.parse(String(init?.body)); return Promise.resolve(new Response(JSON.stringify(feedback), {status: 200})); }
+    if (String(url).includes('/activity/')) return Promise.resolve(new Response(JSON.stringify({feedback}), {status: 200}));
+    return Promise.resolve(new Response(JSON.stringify({...initial, state: 'completed', progress: 1}), {status: 200}));
+  });
+  const user = userEvent.setup(); const view = render(<Tracking token="token" booking={booking} onBack={() => {}} />);
+  await screen.findByText('Trip completed');
+  await user.selectOptions(await screen.findByLabelText('Rating'), '4');
+  await user.click(screen.getByLabelText('Polite driver'));
+  await user.click(screen.getByRole('button', {name: '₹20.00'}));
+  await user.click(screen.getByRole('button', {name: 'Save feedback'}));
+  expect(await screen.findByText(/Feedback saved/)).toHaveTextContent('no payment was made');
+  expect(feedback).toEqual({rating: 4, compliments: ['Polite driver'], tip_paise: 2000});
+  view.unmount(); render(<Tracking token="token" booking={booking} onBack={() => {}} />);
+  expect(await screen.findByLabelText('Rating')).toHaveValue('4');
+  expect(screen.getByLabelText('Polite driver')).toBeChecked();
+});
+
+it('reports feedback save failure without claiming it was saved', async () => {
+  vi.spyOn(globalThis, 'fetch').mockImplementation((url, init) => {
+    if (init?.method === 'PUT') return Promise.resolve(new Response('{"detail":"Save failed"}', {status: 500}));
+    if (String(url).includes('/activity/')) return Promise.resolve(new Response('{"feedback":null}', {status: 200}));
+    return Promise.resolve(new Response(JSON.stringify({...initial, state: 'completed'}), {status: 200}));
+  });
+  const user = userEvent.setup(); render(<Tracking token="token" booking={booking} onBack={() => {}} />);
+  await user.click(await screen.findByRole('button', {name: 'Save feedback'}));
+  expect(await screen.findByRole('alert')).toHaveTextContent('Save failed');
+  expect(screen.queryByText(/Feedback saved/)).not.toBeInTheDocument();
+});

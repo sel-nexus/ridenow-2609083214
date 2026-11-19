@@ -44,8 +44,8 @@
       "_origin": "ast"
     },
     {
-      "id": "backend_app_booking_bookinginput",
-      "label": "BookingInput",
+      "id": "backend_app_booking_parcelinput",
+      "label": "ParcelInput",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
       "source_location": "L48",
@@ -54,11 +54,39 @@
       "_origin": "ast"
     },
     {
+      "id": "backend_app_booking_parcelinput_suitable_vehicle",
+      "label": ".suitable_vehicle()",
+      "file_type": "code",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L58",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_booking_bookinginput",
+      "label": "BookingInput",
+      "file_type": "code",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L65",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_booking_bookinginput_parcel_details",
+      "label": ".parcel_details()",
+      "file_type": "code",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L74",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "backend_app_booking_road_distance",
       "label": "road_distance()",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L56",
+      "source_location": "L81",
       "_callable": true,
       "_origin": "ast"
     },
@@ -67,7 +95,7 @@
       "label": "money()",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L65",
+      "source_location": "L90",
       "_callable": true,
       "_origin": "ast"
     },
@@ -84,7 +112,7 @@
       "label": "prices()",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L70",
+      "source_location": "L95",
       "_callable": true,
       "_origin": "ast"
     },
@@ -93,7 +121,7 @@
       "label": "BookingRepository",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L80",
+      "source_location": "L105",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast"
@@ -103,7 +131,7 @@
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L82",
+      "source_location": "L107",
       "_callable": true,
       "_origin": "ast"
     },
@@ -120,7 +148,7 @@
       "label": ".create_quote()",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L86",
+      "source_location": "L111",
       "_callable": true,
       "_origin": "ast"
     },
@@ -137,7 +165,7 @@
       "label": ".quote()",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L94",
+      "source_location": "L119",
       "_callable": true,
       "_origin": "ast"
     },
@@ -146,7 +174,7 @@
       "label": ".create_booking()",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L98",
+      "source_location": "L123",
       "_callable": true,
       "_origin": "ast"
     },
@@ -155,7 +183,7 @@
       "label": ".booking()",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L104",
+      "source_location": "L129",
       "_callable": true,
       "_origin": "ast"
     },
@@ -164,7 +192,7 @@
       "label": "public_quote()",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L109",
+      "source_location": "L134",
       "_callable": true,
       "_origin": "ast"
     },
@@ -173,7 +201,7 @@
       "label": "public_booking()",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L118",
+      "source_location": "L143",
       "_callable": true,
       "_origin": "ast"
     },
@@ -182,7 +210,7 @@
       "label": "object_id()",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L127",
+      "source_location": "L152",
       "_callable": true,
       "_origin": "ast"
     },
@@ -199,7 +227,7 @@
       "label": "create_quote()",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L136",
+      "source_location": "L161",
       "_callable": true,
       "_origin": "ast"
     },
@@ -224,7 +252,7 @@
       "label": "create_ride()",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L142",
+      "source_location": "L167",
       "_callable": true,
       "_origin": "ast"
     },
@@ -241,7 +269,7 @@
       "label": "get_ride()",
       "file_type": "code",
       "source_file": "backend/app/booking.py",
-      "source_location": "L161",
+      "source_location": "L187",
       "_callable": true,
       "_origin": "ast"
     },
@@ -271,130 +299,154 @@
     },
     {
       "id": "backend_app_booking_rationale_49",
-      "label": "Accept only a server quote reference and validated selections.",
+      "label": "Capture the delivery details needed for a simulated parcel.",
       "file_type": "rationale",
       "source_file": "backend/app/booking.py",
       "source_location": "L49",
       "_origin": "ast"
     },
     {
-      "id": "backend_app_booking_rationale_57",
-      "label": "Estimate road kilometres as 1.4 times great-circle distance.",
+      "id": "backend_app_booking_rationale_59",
+      "label": "Keep larger boxes off two-wheelers.",
       "file_type": "rationale",
       "source_file": "backend/app/booking.py",
-      "source_location": "L57",
+      "source_location": "L59",
       "_origin": "ast"
     },
     {
       "id": "backend_app_booking_rationale_66",
-      "label": "Round a rupee amount to the nearest paise.",
+      "label": "Accept only a server quote reference and validated selections.",
       "file_type": "rationale",
       "source_file": "backend/app/booking.py",
       "source_location": "L66",
       "_origin": "ast"
     },
     {
-      "id": "backend_app_booking_rationale_71",
+      "id": "backend_app_booking_rationale_75",
+      "label": "Require parcel details only for parcel bookings.",
+      "file_type": "rationale",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L75",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_booking_rationale_82",
+      "label": "Estimate road kilometres as 1.4 times great-circle distance.",
+      "file_type": "rationale",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L82",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_booking_rationale_91",
+      "label": "Round a rupee amount to the nearest paise.",
+      "file_type": "rationale",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L91",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_booking_rationale_96",
       "label": "Compute all tier fares from the rounded displayed road estimate.",
       "file_type": "rationale",
       "source_file": "backend/app/booking.py",
-      "source_location": "L71",
+      "source_location": "L96",
       "_origin": "ast"
     },
     {
-      "id": "backend_app_booking_rationale_81",
+      "id": "backend_app_booking_rationale_106",
       "label": "Persist and retrieve quotes and bookings within their owner scope.",
       "file_type": "rationale",
       "source_file": "backend/app/booking.py",
-      "source_location": "L81",
+      "source_location": "L106",
       "_origin": "ast"
     },
     {
-      "id": "backend_app_booking_rationale_83",
+      "id": "backend_app_booking_rationale_108",
       "label": "Use the existing application database pool.",
       "file_type": "rationale",
       "source_file": "backend/app/booking.py",
-      "source_location": "L83",
+      "source_location": "L108",
       "_origin": "ast"
     },
     {
-      "id": "backend_app_booking_rationale_87",
+      "id": "backend_app_booking_rationale_112",
       "label": "Persist the route and simulated demand decision.",
       "file_type": "rationale",
       "source_file": "backend/app/booking.py",
-      "source_location": "L87",
+      "source_location": "L112",
       "_origin": "ast"
     },
     {
-      "id": "backend_app_booking_rationale_95",
+      "id": "backend_app_booking_rationale_120",
       "label": "Find a quote without exposing another rider's data.",
       "file_type": "rationale",
       "source_file": "backend/app/booking.py",
-      "source_location": "L95",
+      "source_location": "L120",
       "_origin": "ast"
     },
     {
-      "id": "backend_app_booking_rationale_99",
+      "id": "backend_app_booking_rationale_124",
       "label": "Persist a booking, preventing multiple bookings from one quote.",
       "file_type": "rationale",
       "source_file": "backend/app/booking.py",
-      "source_location": "L99",
+      "source_location": "L124",
       "_origin": "ast"
     },
     {
-      "id": "backend_app_booking_rationale_105",
+      "id": "backend_app_booking_rationale_130",
       "label": "Find a booking without exposing another rider's data.",
       "file_type": "rationale",
       "source_file": "backend/app/booking.py",
-      "source_location": "L105",
+      "source_location": "L130",
       "_origin": "ast"
     },
     {
-      "id": "backend_app_booking_rationale_110",
+      "id": "backend_app_booking_rationale_135",
       "label": "Recalculate and serialize a quote without owner information.",
       "file_type": "rationale",
       "source_file": "backend/app/booking.py",
-      "source_location": "L110",
+      "source_location": "L135",
       "_origin": "ast"
     },
     {
-      "id": "backend_app_booking_rationale_119",
+      "id": "backend_app_booking_rationale_144",
       "label": "Expose the persisted booking and tracking handoff data.",
       "file_type": "rationale",
       "source_file": "backend/app/booking.py",
-      "source_location": "L119",
+      "source_location": "L144",
       "_origin": "ast"
     },
     {
-      "id": "backend_app_booking_rationale_128",
+      "id": "backend_app_booking_rationale_153",
       "label": "Return an object ID or a non-disclosing not-found error.",
       "file_type": "rationale",
       "source_file": "backend/app/booking.py",
-      "source_location": "L128",
-      "_origin": "ast"
-    },
-    {
-      "id": "backend_app_booking_rationale_137",
-      "label": "Create a simulated demand quote for the current rider.",
-      "file_type": "rationale",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L137",
-      "_origin": "ast"
-    },
-    {
-      "id": "backend_app_booking_rationale_143",
-      "label": "Recompute the selected fare and save a simulated booking.",
-      "file_type": "rationale",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L143",
+      "source_location": "L153",
       "_origin": "ast"
     },
     {
       "id": "backend_app_booking_rationale_162",
-      "label": "Retrieve an owned booking for the future tracking flow.",
+      "label": "Create a simulated demand quote for the current rider.",
       "file_type": "rationale",
       "source_file": "backend/app/booking.py",
       "source_location": "L162",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_booking_rationale_168",
+      "label": "Recompute the selected fare and save a simulated booking.",
+      "file_type": "rationale",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L168",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_booking_rationale_188",
+      "label": "Retrieve an owned booking for the future tracking flow.",
+      "file_type": "rationale",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L188",
       "_origin": "ast"
     },
     {
@@ -1388,7 +1440,7 @@
       "label": "Settings",
       "file_type": "code",
       "source_file": "backend/app/main.py",
-      "source_location": "L14",
+      "source_location": "L15",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
@@ -1408,7 +1460,7 @@
       "label": "create_app()",
       "file_type": "code",
       "source_file": "backend/app/main.py",
-      "source_location": "L22",
+      "source_location": "L23",
       "_callable": true,
       "_origin": "ast",
       "community": 1
@@ -1427,7 +1479,7 @@
       "label": "lifespan()",
       "file_type": "code",
       "source_file": "backend/app/main.py",
-      "source_location": "L27",
+      "source_location": "L28",
       "_callable": true,
       "_origin": "ast",
       "community": 1
@@ -1437,7 +1489,7 @@
       "label": "health()",
       "file_type": "code",
       "source_file": "backend/app/main.py",
-      "source_location": "L48",
+      "source_location": "L50",
       "_callable": true,
       "_origin": "ast",
       "community": 1
@@ -1452,19 +1504,324 @@
       "community": 1
     },
     {
-      "id": "backend_app_main_rationale_15",
+      "id": "backend_app_main_rationale_16",
       "label": "Read deployment settings from environment or the local env file.",
       "file_type": "rationale",
       "source_file": "backend/app/main.py",
-      "source_location": "L15",
+      "source_location": "L16",
       "_origin": "ast"
     },
     {
-      "id": "backend_app_main_rationale_23",
+      "id": "backend_app_main_rationale_24",
       "label": "Create an app with a single lifecycle-bound asynchronous Mongo client.",
       "file_type": "rationale",
       "source_file": "backend/app/main.py",
-      "source_location": "L23",
+      "source_location": "L24",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking",
+      "label": "tracking.py",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_pininput",
+      "label": "PinInput",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L18",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_py_basemodel",
+      "label": "BaseModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_cancelinput",
+      "label": "CancelInput",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L24",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_assignment",
+      "label": "assignment()",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L30",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_trackingrepository",
+      "label": "TrackingRepository",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L47",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_trackingrepository_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L49",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_py_asyncdatabase",
+      "label": "AsyncDatabase",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_trackingrepository_get",
+      "label": ".get()",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L54",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_trackingrepository_change",
+      "label": ".change()",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L65",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_trackingrepository_refresh",
+      "label": ".refresh()",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L71",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_public_tracking",
+      "label": "public_tracking()",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L97",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_current",
+      "label": "current()",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L110",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_py_get",
+      "label": "get",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_get_tracking",
+      "label": "get_tracking()",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L119",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_py_request",
+      "label": "Request",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_py_depends",
+      "label": "Depends",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_py_post",
+      "label": "post",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_verify_pin",
+      "label": "verify_pin()",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L125",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_cancel",
+      "label": "cancel()",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L147",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_advance_parcel",
+      "label": "advance_parcel()",
+      "file_type": "code",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L160",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_1",
+      "label": "Persist owner-scoped simulated matching and atomic journey transitions.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_19",
+      "label": "Validate a four-digit simulated safety PIN.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L19",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_25",
+      "label": "Require explicit confirmation before cancellation.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L25",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_31",
+      "label": "Generate one simulated driver and pickup schedule per booking.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L31",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_48",
+      "label": "Use single-document compare-and-set operations for journey state.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L48",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_50",
+      "label": "Scope every lookup and update to the authenticated owner.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L50",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_55",
+      "label": "Retrieve a booking, lazily assigning a driver once.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L55",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_66",
+      "label": "Update only the exact version read, preventing concurrent replays.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L66",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_72",
+      "label": "Advance elapsed simulated phases without overwriting a concurrent action.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L72",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_98",
+      "label": "Return owner-visible simulation data and bounded countdowns.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L98",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_111",
+      "label": "Return tracking state or reject terminal legacy bookings.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L111",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_120",
+      "label": "Initialize and read a rider's persisted simulation.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L120",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_126",
+      "label": "Start only on an arrived booking; the third wrong PIN cancels atomically.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L126",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_148",
+      "label": "Cancel an active simulation only after explicit confirmation.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L148",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_app_tracking_rationale_161",
+      "label": "Advance a parcel one explicitly requested stage, rejecting replay.",
+      "file_type": "rationale",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L161",
       "_origin": "ast"
     },
     {
@@ -1765,6 +2122,167 @@
       "_origin": "ast"
     },
     {
+      "id": "backend_tests_test_tracking",
+      "label": "test_tracking.py",
+      "file_type": "code",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_py_fixture",
+      "label": "fixture",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_client",
+      "label": "client()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L20",
+      "_py_fixture": "?",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_login",
+      "label": "login()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L37",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_book",
+      "label": "book()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L42",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_arrive",
+      "label": "arrive()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L51",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_test_owner_matching_pin_and_completed_ride",
+      "label": "test_owner_matching_pin_and_completed_ride()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L56",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_test_wrong_pin_race_cancels_on_third_attempt",
+      "label": "test_wrong_pin_race_cancels_on_third_attempt()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L82",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_test_parcel_validation_lifecycle_and_confirmation",
+      "label": "test_parcel_validation_lifecycle_and_confirmation()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L99",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_test_confirmed_cancellation_is_terminal",
+      "label": "test_confirmed_cancellation_is_terminal()",
+      "file_type": "code",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L123",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_rationale_1",
+      "label": "Exercise tracking through HTTP against an isolated real MongoDB database.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_rationale_21",
+      "label": "Provide an isolated database and remove only that database afterward.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L21",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_rationale_38",
+      "label": "Create a guest session through the real identity API.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L38",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_rationale_43",
+      "label": "Create a quote and book it for the specified owner.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L43",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_rationale_52",
+      "label": "Move persisted timestamps into the past without waiting for the simulation.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L52",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_rationale_57",
+      "label": "Persist one driver, enforce owner isolation and reject PIN replay.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L57",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_rationale_83",
+      "label": "Concurrent incorrect submissions cannot bypass the three-attempt limit.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L83",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_rationale_100",
+      "label": "Validate parcel input, enforce ordered stages and explicit cancellation.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L100",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_tests_test_tracking_rationale_124",
+      "label": "Require confirmation and prevent cancellation or starting from being replayed.",
+      "file_type": "rationale",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L124",
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_app_layout",
       "label": "layout.tsx",
       "file_type": "code",
@@ -1873,7 +2391,7 @@
       "label": "pickup",
       "file_type": "code",
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "_origin": "ast"
     },
     {
@@ -1881,7 +2399,7 @@
       "label": "methods",
       "file_type": "code",
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "_origin": "ast"
     },
     {
@@ -1889,7 +2407,7 @@
       "label": "descriptions",
       "file_type": "code",
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast"
     },
     {
@@ -1897,7 +2415,7 @@
       "label": "icons",
       "file_type": "code",
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L15",
+      "source_location": "L16",
       "_origin": "ast"
     },
     {
@@ -1905,7 +2423,7 @@
       "label": "rupees()",
       "file_type": "code",
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L16",
+      "source_location": "L17",
       "_callable": true,
       "_origin": "ast"
     },
@@ -1914,7 +2432,7 @@
       "label": "Booking()",
       "file_type": "code",
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L19",
+      "source_location": "L20",
       "_callable": true,
       "_origin": "ast"
     },
@@ -1923,7 +2441,7 @@
       "label": "confirm()",
       "file_type": "code",
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L40",
+      "source_location": "L42",
       "_callable": true,
       "_origin": "ast"
     },
@@ -2194,6 +2712,99 @@
       "_origin": "ast"
     },
     {
+      "id": "frontend_components_tracking_test",
+      "label": "Tracking.test.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/Tracking.test.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_tracking_test_booking",
+      "label": "booking",
+      "file_type": "code",
+      "source_file": "frontend/components/Tracking.test.tsx",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_tracking_test_initial",
+      "label": "initial",
+      "file_type": "code",
+      "source_file": "frontend/components/Tracking.test.tsx",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_tracking",
+      "label": "Tracking.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_tracking_symbols",
+      "label": "symbols",
+      "file_type": "code",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_tracking_labels",
+      "label": "labels",
+      "file_type": "code",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L16",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_tracking_trackingmap",
+      "label": "TrackingMap()",
+      "file_type": "code",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L19",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_tracking_tracking",
+      "label": "Tracking()",
+      "file_type": "code",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L57",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_tracking_tracking_action",
+      "label": "action()",
+      "file_type": "code",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L83",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_tracking_tracking_share",
+      "label": "share()",
+      "file_type": "code",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L90",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "leaflet",
+      "label": "leaflet",
+      "file_type": "code",
+      "source_file": "leaflet",
+      "confidence": "EXTRACTED",
+      "type": "module",
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_e2e_booking_spec",
       "label": "booking.spec.ts",
       "file_type": "code",
@@ -2215,6 +2826,14 @@
       "label": "search.spec.ts",
       "file_type": "code",
       "source_file": "frontend/e2e/search.spec.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_tracking_spec",
+      "label": "tracking.spec.ts",
+      "file_type": "code",
+      "source_file": "frontend/e2e/tracking.spec.ts",
       "source_location": "L1",
       "_origin": "ast"
     },
@@ -2300,11 +2919,31 @@
       "_origin": "ast"
     },
     {
+      "id": "frontend_lib_api_parcel",
+      "label": "Parcel",
+      "file_type": "code",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L8",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_lib_api_ridebooking",
       "label": "RideBooking",
       "file_type": "code",
       "source_file": "frontend/lib/api.ts",
-      "source_location": "L8",
+      "source_location": "L9",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_lib_api_trackingstate",
+      "label": "TrackingState",
+      "file_type": "code",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L10",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast"
@@ -2314,7 +2953,7 @@
       "label": "api()",
       "file_type": "code",
       "source_file": "frontend/lib/api.ts",
-      "source_location": "L11",
+      "source_location": "L13",
       "_callable": true,
       "_origin": "ast",
       "community": 5
@@ -2980,7 +3619,7 @@
     },
     {
       "source": "backend_app_booking",
-      "target": "backend_app_booking_bookinginput",
+      "target": "backend_app_booking_parcelinput",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
@@ -2989,7 +3628,7 @@
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_bookinginput",
+      "source": "backend_app_booking_parcelinput",
       "target": "backend_app_booking_py_basemodel",
       "relation": "inherits",
       "confidence": "EXTRACTED",
@@ -2999,12 +3638,74 @@
       "_origin": "ast"
     },
     {
+      "source": "backend_app_booking_parcelinput_suitable_vehicle",
+      "target": "model_validator",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_parcelinput",
+      "target": "backend_app_booking_parcelinput_suitable_vehicle",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking",
+      "target": "backend_app_booking_bookinginput",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_bookinginput",
+      "target": "backend_app_booking_py_basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_bookinginput_parcel_details",
+      "target": "model_validator",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_bookinginput",
+      "target": "backend_app_booking_bookinginput_parcel_details",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "backend_app_booking",
       "target": "backend_app_booking_road_distance",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L56",
+      "source_location": "L81",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3015,7 +3716,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L56",
+      "source_location": "L81",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3025,7 +3726,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L65",
+      "source_location": "L90",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3036,7 +3737,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L65",
+      "source_location": "L90",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3046,7 +3747,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L70",
+      "source_location": "L95",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3056,7 +3757,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L80",
+      "source_location": "L105",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3066,7 +3767,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L82",
+      "source_location": "L107",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3077,7 +3778,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L82",
+      "source_location": "L107",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3087,7 +3788,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L86",
+      "source_location": "L111",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3098,7 +3799,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L86",
+      "source_location": "L111",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3109,7 +3810,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L86",
+      "source_location": "L111",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3119,7 +3820,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L94",
+      "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3130,7 +3831,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L94",
+      "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3140,7 +3841,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L98",
+      "source_location": "L123",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3150,7 +3851,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L104",
+      "source_location": "L129",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3161,7 +3862,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L104",
+      "source_location": "L129",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3171,7 +3872,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L109",
+      "source_location": "L134",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3181,7 +3882,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L118",
+      "source_location": "L143",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3191,7 +3892,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L127",
+      "source_location": "L152",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3202,143 +3903,13 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L127",
+      "source_location": "L152",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
       "source": "backend_app_booking_create_quote",
       "target": "backend_app_booking_py_post",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L135",
-      "weight": 1.0,
-      "context": "decorator",
-      "_origin": "ast"
-    },
-    {
-      "source": "backend_app_booking",
-      "target": "backend_app_booking_create_quote",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L136",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "backend_app_booking_create_quote",
-      "target": "backend_app_booking_quoteinput",
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L136",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "backend_app_booking_create_quote",
-      "target": "backend_app_booking_py_request",
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L136",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "backend_app_booking_create_quote",
-      "target": "backend_app_booking_py_depends",
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L136",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "backend_app_booking_create_quote",
-      "target": "backend_app_core_current_user",
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L136",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "backend_app_booking_create_ride",
-      "target": "backend_app_booking_py_post",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L141",
-      "weight": 1.0,
-      "context": "decorator",
-      "_origin": "ast"
-    },
-    {
-      "source": "backend_app_booking",
-      "target": "backend_app_booking_create_ride",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L142",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "backend_app_booking_create_ride",
-      "target": "backend_app_booking_bookinginput",
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L142",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "backend_app_booking_create_ride",
-      "target": "backend_app_booking_py_request",
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L142",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "backend_app_booking_create_ride",
-      "target": "backend_app_booking_py_depends",
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L142",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "backend_app_booking_create_ride",
-      "target": "backend_app_core_current_user",
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L142",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "backend_app_booking_get_ride",
-      "target": "backend_app_booking_py_get",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
@@ -3349,7 +3920,7 @@
     },
     {
       "source": "backend_app_booking",
-      "target": "backend_app_booking_get_ride",
+      "target": "backend_app_booking_create_quote",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
@@ -3358,7 +3929,18 @@
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_get_ride",
+      "source": "backend_app_booking_create_quote",
+      "target": "backend_app_booking_quoteinput",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L161",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_create_quote",
       "target": "backend_app_booking_py_request",
       "relation": "references",
       "context": "parameter_type",
@@ -3369,7 +3951,7 @@
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_get_ride",
+      "source": "backend_app_booking_create_quote",
       "target": "backend_app_booking_py_depends",
       "relation": "references",
       "context": "generic_arg",
@@ -3380,7 +3962,7 @@
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_get_ride",
+      "source": "backend_app_booking_create_quote",
       "target": "backend_app_core_current_user",
       "relation": "references",
       "context": "generic_arg",
@@ -3391,13 +3973,132 @@
       "_origin": "ast"
     },
     {
+      "source": "backend_app_booking_create_ride",
+      "target": "backend_app_booking_py_post",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L166",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking",
+      "target": "backend_app_booking_create_ride",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_create_ride",
+      "target": "backend_app_booking_bookinginput",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_create_ride",
+      "target": "backend_app_booking_py_request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_create_ride",
+      "target": "backend_app_booking_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_create_ride",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_get_ride",
+      "target": "backend_app_booking_py_get",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L186",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking",
+      "target": "backend_app_booking_get_ride",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L187",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_get_ride",
+      "target": "backend_app_booking_py_request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L187",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_get_ride",
+      "target": "backend_app_booking_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L187",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_get_ride",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L187",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "backend_app_booking_prices",
       "target": "backend_app_booking_money",
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L75",
+      "source_location": "L100",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3408,7 +4109,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L112",
+      "source_location": "L137",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3419,7 +4120,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L115",
+      "source_location": "L140",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3430,7 +4131,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L138",
+      "source_location": "L163",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3441,7 +4142,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L138",
+      "source_location": "L163",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3452,7 +4153,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L144",
+      "source_location": "L169",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3463,7 +4164,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L145",
+      "source_location": "L170",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3474,7 +4175,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L148",
+      "source_location": "L173",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3485,7 +4186,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L155",
+      "source_location": "L181",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3496,7 +4197,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L163",
+      "source_location": "L189",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3507,7 +4208,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L163",
+      "source_location": "L189",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3518,7 +4219,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L166",
+      "source_location": "L192",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3554,7 +4255,7 @@
     },
     {
       "source": "backend_app_booking_rationale_49",
-      "target": "backend_app_booking_bookinginput",
+      "target": "backend_app_booking_parcelinput",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
@@ -3563,18 +4264,18 @@
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_rationale_57",
-      "target": "backend_app_booking_road_distance",
+      "source": "backend_app_booking_rationale_59",
+      "target": "backend_app_booking_parcelinput_suitable_vehicle",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L57",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
       "source": "backend_app_booking_rationale_66",
-      "target": "backend_app_booking_money",
+      "target": "backend_app_booking_bookinginput",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
@@ -3583,132 +4284,162 @@
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_rationale_71",
+      "source": "backend_app_booking_rationale_75",
+      "target": "backend_app_booking_bookinginput_parcel_details",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_rationale_82",
+      "target": "backend_app_booking_road_distance",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_rationale_91",
+      "target": "backend_app_booking_money",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_rationale_96",
       "target": "backend_app_booking_prices",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L71",
+      "source_location": "L96",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_rationale_81",
+      "source": "backend_app_booking_rationale_106",
       "target": "backend_app_booking_bookingrepository",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L81",
+      "source_location": "L106",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_rationale_83",
+      "source": "backend_app_booking_rationale_108",
       "target": "backend_app_booking_bookingrepository_init",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L83",
+      "source_location": "L108",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_rationale_87",
+      "source": "backend_app_booking_rationale_112",
       "target": "backend_app_booking_bookingrepository_create_quote",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L87",
+      "source_location": "L112",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_rationale_95",
+      "source": "backend_app_booking_rationale_120",
       "target": "backend_app_booking_bookingrepository_quote",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L95",
+      "source_location": "L120",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_rationale_99",
+      "source": "backend_app_booking_rationale_124",
       "target": "backend_app_booking_bookingrepository_create_booking",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L99",
+      "source_location": "L124",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_rationale_105",
+      "source": "backend_app_booking_rationale_130",
       "target": "backend_app_booking_bookingrepository_booking",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L105",
+      "source_location": "L130",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_rationale_110",
+      "source": "backend_app_booking_rationale_135",
       "target": "backend_app_booking_public_quote",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L110",
+      "source_location": "L135",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_rationale_119",
+      "source": "backend_app_booking_rationale_144",
       "target": "backend_app_booking_public_booking",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L119",
+      "source_location": "L144",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
-      "source": "backend_app_booking_rationale_128",
+      "source": "backend_app_booking_rationale_153",
       "target": "backend_app_booking_object_id",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L128",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "backend_app_booking_rationale_137",
-      "target": "backend_app_booking_create_quote",
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L137",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "backend_app_booking_rationale_143",
-      "target": "backend_app_booking_create_ride",
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/app/booking.py",
-      "source_location": "L143",
+      "source_location": "L153",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
       "source": "backend_app_booking_rationale_162",
-      "target": "backend_app_booking_get_ride",
+      "target": "backend_app_booking_create_quote",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
       "source_location": "L162",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_rationale_168",
+      "target": "backend_app_booking_create_ride",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L168",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_rationale_188",
+      "target": "backend_app_booking_get_ride",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L188",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5693,11 +6424,22 @@
     },
     {
       "source": "backend_app_main",
+      "target": "backend_app_tracking",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/main.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_main",
       "target": "backend_app_main_settings",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5707,7 +6449,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5717,7 +6459,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5728,7 +6470,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5739,7 +6481,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5749,7 +6491,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5759,7 +6501,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L48",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5770,7 +6512,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5782,7 +6524,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "backend/app/main.py",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -5797,22 +6539,750 @@
       "_origin": "ast"
     },
     {
-      "source": "backend_app_main_rationale_15",
+      "source": "backend_app_main_rationale_16",
       "target": "backend_app_main_settings",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
-      "source": "backend_app_main_rationale_23",
+      "source": "backend_app_main_rationale_24",
       "target": "backend_app_main_create_app",
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/main.py",
-      "source_location": "L23",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "fastapi",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_booking",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_core",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_tracking_pininput",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_pininput",
+      "target": "backend_app_tracking_py_basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_tracking_cancelinput",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_cancelinput",
+      "target": "backend_app_tracking_py_basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_tracking_assignment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_tracking_trackingrepository",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_trackingrepository",
+      "target": "backend_app_tracking_trackingrepository_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_trackingrepository_init",
+      "target": "backend_app_tracking_py_asyncdatabase",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_trackingrepository",
+      "target": "backend_app_tracking_trackingrepository_get",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_trackingrepository",
+      "target": "backend_app_tracking_trackingrepository_change",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_trackingrepository",
+      "target": "backend_app_tracking_trackingrepository_refresh",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_tracking_public_tracking",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_tracking_current",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L110",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_current",
+      "target": "backend_app_tracking_trackingrepository",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L110",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_get_tracking",
+      "target": "backend_app_tracking_py_get",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_tracking_get_tracking",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_get_tracking",
+      "target": "backend_app_tracking_py_request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_get_tracking",
+      "target": "backend_app_tracking_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_get_tracking",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_verify_pin",
+      "target": "backend_app_tracking_py_post",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_tracking_verify_pin",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_verify_pin",
+      "target": "backend_app_tracking_pininput",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_verify_pin",
+      "target": "backend_app_tracking_py_request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_verify_pin",
+      "target": "backend_app_tracking_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_verify_pin",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_cancel",
+      "target": "backend_app_tracking_py_post",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L146",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_tracking_cancel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L147",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_cancel",
+      "target": "backend_app_tracking_cancelinput",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L147",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_cancel",
+      "target": "backend_app_tracking_py_request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L147",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_cancel",
+      "target": "backend_app_tracking_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L147",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_cancel",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L147",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_advance_parcel",
+      "target": "backend_app_tracking_py_post",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L159",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_tracking_advance_parcel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L160",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_advance_parcel",
+      "target": "backend_app_tracking_py_request",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L160",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_advance_parcel",
+      "target": "backend_app_tracking_py_depends",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L160",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_advance_parcel",
+      "target": "backend_app_core_current_user",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L160",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_trackingrepository_get",
+      "target": "backend_app_tracking_assignment",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_trackingrepository_refresh",
+      "target": "backend_app_tracking_trackingrepository_get",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_trackingrepository_refresh",
+      "target": "backend_app_tracking_trackingrepository_change",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_get_tracking",
+      "target": "backend_app_tracking_public_tracking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_get_tracking",
+      "target": "backend_app_tracking_current",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_get_tracking",
+      "target": "backend_app_tracking_trackingrepository",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_verify_pin",
+      "target": "backend_app_tracking_trackingrepository",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L127",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_verify_pin",
+      "target": "backend_app_tracking_current",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L129",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_verify_pin",
+      "target": "backend_app_tracking_public_tracking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L143",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_cancel",
+      "target": "backend_app_tracking_trackingrepository",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L149",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_cancel",
+      "target": "backend_app_tracking_current",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L151",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_cancel",
+      "target": "backend_app_tracking_public_tracking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L156",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_advance_parcel",
+      "target": "backend_app_tracking_trackingrepository",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L162",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_advance_parcel",
+      "target": "backend_app_tracking_current",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L163",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_advance_parcel",
+      "target": "backend_app_tracking_public_tracking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L175",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_1",
+      "target": "backend_app_tracking",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_19",
+      "target": "backend_app_tracking_pininput",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_25",
+      "target": "backend_app_tracking_cancelinput",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_31",
+      "target": "backend_app_tracking_assignment",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_48",
+      "target": "backend_app_tracking_trackingrepository",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_50",
+      "target": "backend_app_tracking_trackingrepository_init",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_55",
+      "target": "backend_app_tracking_trackingrepository_get",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_66",
+      "target": "backend_app_tracking_trackingrepository_change",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_72",
+      "target": "backend_app_tracking_trackingrepository_refresh",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_98",
+      "target": "backend_app_tracking_public_tracking",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_111",
+      "target": "backend_app_tracking_current",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L111",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_120",
+      "target": "backend_app_tracking_get_tracking",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L120",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_126",
+      "target": "backend_app_tracking_verify_pin",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_148",
+      "target": "backend_app_tracking_cancel",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L148",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_rationale_161",
+      "target": "backend_app_tracking_advance_parcel",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L161",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -6230,6 +7700,319 @@
       "_origin": "ast"
     },
     {
+      "source": "backend_tests_test_tracking",
+      "target": "backend_app_main",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_client",
+      "target": "backend_tests_test_tracking_py_fixture",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking",
+      "target": "backend_tests_test_tracking_client",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking",
+      "target": "backend_tests_test_tracking_login",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking",
+      "target": "backend_tests_test_tracking_book",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking",
+      "target": "backend_tests_test_tracking_arrive",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking",
+      "target": "backend_tests_test_tracking_test_owner_matching_pin_and_completed_ride",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking",
+      "target": "backend_tests_test_tracking_test_wrong_pin_race_cancels_on_third_attempt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking",
+      "target": "backend_tests_test_tracking_test_parcel_validation_lifecycle_and_confirmation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking",
+      "target": "backend_tests_test_tracking_test_confirmed_cancellation_is_terminal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_test_owner_matching_pin_and_completed_ride",
+      "target": "backend_tests_test_tracking_login",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_test_owner_matching_pin_and_completed_ride",
+      "target": "backend_tests_test_tracking_book",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_test_owner_matching_pin_and_completed_ride",
+      "target": "backend_tests_test_tracking_arrive",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_test_wrong_pin_race_cancels_on_third_attempt",
+      "target": "backend_tests_test_tracking_login",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_test_wrong_pin_race_cancels_on_third_attempt",
+      "target": "backend_tests_test_tracking_book",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_test_wrong_pin_race_cancels_on_third_attempt",
+      "target": "backend_tests_test_tracking_arrive",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_test_parcel_validation_lifecycle_and_confirmation",
+      "target": "backend_tests_test_tracking_login",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_test_parcel_validation_lifecycle_and_confirmation",
+      "target": "backend_tests_test_tracking_book",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L103",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_test_parcel_validation_lifecycle_and_confirmation",
+      "target": "backend_tests_test_tracking_arrive",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L113",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_test_confirmed_cancellation_is_terminal",
+      "target": "backend_tests_test_tracking_login",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_test_confirmed_cancellation_is_terminal",
+      "target": "backend_tests_test_tracking_book",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L127",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_rationale_1",
+      "target": "backend_tests_test_tracking",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_rationale_21",
+      "target": "backend_tests_test_tracking_client",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_rationale_38",
+      "target": "backend_tests_test_tracking_login",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_rationale_43",
+      "target": "backend_tests_test_tracking_book",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_rationale_52",
+      "target": "backend_tests_test_tracking_arrive",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_rationale_57",
+      "target": "backend_tests_test_tracking_test_owner_matching_pin_and_completed_ride",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_rationale_83",
+      "target": "backend_tests_test_tracking_test_wrong_pin_race_cancels_on_third_attempt",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_rationale_100",
+      "target": "backend_tests_test_tracking_test_parcel_validation_lifecycle_and_confirmation",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking_rationale_124",
+      "target": "backend_tests_test_tracking_test_confirmed_cancellation_is_terminal",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_app_layout",
       "target": "ref_next",
       "relation": "imports_from",
@@ -6488,17 +8271,29 @@
     },
     {
       "source": "frontend_components_booking",
-      "target": "frontend_components_booking_pickup",
-      "relation": "contains",
+      "target": "frontend_lib_api_parcel",
+      "relation": "imports",
+      "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L6",
+      "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
       "source": "frontend_components_booking",
-      "target": "frontend_components_booking_methods",
+      "target": "frontend_components_tracking",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Booking.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_booking",
+      "target": "frontend_components_booking_pickup",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Booking.tsx",
@@ -6508,17 +8303,17 @@
     },
     {
       "source": "frontend_components_booking",
-      "target": "frontend_components_booking_descriptions",
+      "target": "frontend_components_booking_methods",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L14",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
       "source": "frontend_components_booking",
-      "target": "frontend_components_booking_icons",
+      "target": "frontend_components_booking_descriptions",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Booking.tsx",
@@ -6528,7 +8323,7 @@
     },
     {
       "source": "frontend_components_booking",
-      "target": "frontend_components_booking_rupees",
+      "target": "frontend_components_booking_icons",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Booking.tsx",
@@ -6538,11 +8333,21 @@
     },
     {
       "source": "frontend_components_booking",
+      "target": "frontend_components_booking_rupees",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Booking.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_booking",
       "target": "frontend_components_booking_booking",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -6552,7 +8357,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L40",
+      "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -6563,7 +8368,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L56",
+      "source_location": "L62",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -6574,7 +8379,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L81",
+      "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -7327,6 +9132,272 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_components_tracking_test",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.test.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_test",
+      "target": "ref_testing_library_jest_dom",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.test.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_test",
+      "target": "ref_vitest",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_test",
+      "target": "ref_testing_library_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_test",
+      "target": "ref_testing_library_user_event",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.test.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_test",
+      "target": "frontend_components_tracking",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.test.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_test",
+      "target": "frontend_components_tracking_test_booking",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.test.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_test",
+      "target": "frontend_components_tracking_test_initial",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.test.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
+      "target": "ref_leaflet",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "type_only": true,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
+      "target": "frontend_lib_api",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
+      "target": "frontend_lib_api_api",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
+      "target": "frontend_lib_api_ridebooking",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
+      "target": "frontend_lib_api_trackingstate",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
+      "target": "frontend_components_tracking_symbols",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
+      "target": "frontend_components_tracking_labels",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
+      "target": "frontend_components_tracking_trackingmap",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
+      "target": "frontend_components_tracking_tracking",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_tracking",
+      "target": "frontend_components_tracking_tracking_action",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_tracking",
+      "target": "frontend_components_tracking_tracking_share",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_trackingmap",
+      "target": "ref_leaflet",
+      "relation": "imports_from",
+      "context": "import",
+      "deferred": true,
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_tracking",
+      "target": "frontend_components_tracking_trackingmap",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_tracking",
+      "target": "frontend_components_tracking_tracking_action",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L106",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_tracking",
+      "target": "frontend_components_tracking_tracking_share",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "source_location": "L112",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking",
+      "target": "leaflet",
+      "relation": "dynamic_import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.tsx",
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_e2e_booking_spec",
       "target": "ref_playwright_test",
       "relation": "imports_from",
@@ -7355,6 +9426,17 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/e2e/search.spec.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_e2e_tracking_spec",
+      "target": "ref_playwright_test",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/e2e/tracking.spec.ts",
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast"
@@ -7431,7 +9513,7 @@
     },
     {
       "source": "frontend_lib_api",
-      "target": "frontend_lib_api_ridebooking",
+      "target": "frontend_lib_api_parcel",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/lib/api.ts",
@@ -7441,11 +9523,31 @@
     },
     {
       "source": "frontend_lib_api",
+      "target": "frontend_lib_api_ridebooking",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_lib_api",
+      "target": "frontend_lib_api_trackingstate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/lib/api.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_lib_api",
       "target": "frontend_lib_api_api",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/lib/api.ts",
-      "source_location": "L11",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8088,6 +10190,17 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_components_booking",
+      "target": "frontend_components_tracking_tracking",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Booking.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_components_identity_test",
       "target": "frontend_components_identity_identity",
       "relation": "imports",
@@ -8128,6 +10241,17 @@
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Search.tsx",
       "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_tracking_test",
+      "target": "frontend_components_tracking_tracking",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Tracking.test.tsx",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8220,6 +10344,50 @@
       "_origin": "ast"
     },
     {
+      "source": "backend_app_tracking",
+      "target": "backend_app_booking_object_id",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_booking_public_booking",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_core_current_user",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking",
+      "target": "backend_app_core_database",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "backend_tests_test_booking",
       "target": "backend_app_booking_prices",
       "relation": "imports",
@@ -8330,13 +10498,35 @@
       "_origin": "ast"
     },
     {
+      "source": "backend_tests_test_tracking",
+      "target": "backend_app_main_settings",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_tests_test_tracking",
+      "target": "backend_app_main_create_app",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_components_booking_booking",
       "target": "frontend_lib_api_api",
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8369,7 +10559,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "backend/app/booking.py",
-      "source_location": "L111",
+      "source_location": "L136",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_public_tracking",
+      "target": "backend_app_booking_public_booking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L101",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8446,7 +10647,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "backend/app/booking.py",
-      "source_location": "L56",
+      "source_location": "L81",
       "weight": 0.8,
       "_origin": "ast"
     },
@@ -8457,7 +10658,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "backend/app/booking.py",
-      "source_location": "L111",
+      "source_location": "L136",
       "weight": 0.8,
       "_origin": "ast"
     },
@@ -8561,6 +10762,17 @@
       "_origin": "ast"
     },
     {
+      "source": "backend_tests_test_tracking_client",
+      "target": "backend_app_main_settings",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L24",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
       "source": "backend_app_booking_create_quote",
       "target": "backend_app_core_database",
       "relation": "calls",
@@ -8568,7 +10780,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/app/booking.py",
-      "source_location": "L138",
+      "source_location": "L163",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8580,7 +10792,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/app/booking.py",
-      "source_location": "L144",
+      "source_location": "L169",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8592,7 +10804,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/app/booking.py",
-      "source_location": "L163",
+      "source_location": "L189",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8693,6 +10905,66 @@
       "_origin": "ast"
     },
     {
+      "source": "backend_app_tracking_trackingrepository_init",
+      "target": "backend_app_booking_object_id",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_get_tracking",
+      "target": "backend_app_core_database",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_verify_pin",
+      "target": "backend_app_core_database",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L127",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_cancel",
+      "target": "backend_app_core_database",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L149",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_advance_parcel",
+      "target": "backend_app_core_database",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L162",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "backend_tests_test_booking_client",
       "target": "backend_app_main_create_app",
       "relation": "calls",
@@ -8729,6 +11001,18 @@
       "_origin": "ast"
     },
     {
+      "source": "backend_tests_test_tracking_client",
+      "target": "backend_app_main_create_app",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/tests/test_tracking.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_app_page_home",
       "target": "frontend_components_identity_identity",
       "relation": "calls",
@@ -8741,6 +11025,18 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_components_booking_booking",
+      "target": "frontend_components_tracking_tracking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/components/Booking.tsx",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_components_booking_booking_confirm",
       "target": "frontend_lib_api_api",
       "relation": "calls",
@@ -8748,7 +11044,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/components/Booking.tsx",
-      "source_location": "L45",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8784,7 +11080,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "backend/app/booking.py",
-      "source_location": "L145",
+      "source_location": "L170",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8796,7 +11092,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "backend/app/booking.py",
-      "source_location": "L155",
+      "source_location": "L181",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8823,6 +11119,236 @@
       "source_location": "L104",
       "weight": 1.0,
       "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_current",
+      "target": "backend_app_tracking_trackingrepository_refresh",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_verify_pin",
+      "target": "backend_app_tracking_trackingrepository_change",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L141",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_cancel",
+      "target": "backend_app_tracking_trackingrepository_change",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L154",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_tracking_advance_parcel",
+      "target": "backend_app_tracking_trackingrepository_change",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "backend/app/tracking.py",
+      "source_location": "L172",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_app_booking_quoteinput",
+      "target": "backend_app_booking_bookingrepository_create_quote",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_booking_bookingrepository_create_quote",
+      "_tgt": "backend_app_booking_quoteinput"
+    },
+    {
+      "source": "backend_app_booking_quoteinput",
+      "target": "backend_app_booking_create_quote",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_booking_create_quote",
+      "_tgt": "backend_app_booking_quoteinput"
+    },
+    {
+      "source": "model_validator",
+      "target": "backend_app_booking_quoteinput_different_points",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_app_booking_quoteinput_different_points",
+      "_tgt": "model_validator"
+    },
+    {
+      "source": "backend_app_booking_bookinginput",
+      "target": "backend_app_booking_create_ride",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L142",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_booking_create_ride",
+      "_tgt": "backend_app_booking_bookinginput"
+    },
+    {
+      "source": "backend_app_booking_py_objectid",
+      "target": "backend_app_booking_bookingrepository_booking",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_booking_bookingrepository_booking",
+      "_tgt": "backend_app_booking_py_objectid"
+    },
+    {
+      "source": "backend_app_booking_py_objectid",
+      "target": "backend_app_booking_bookingrepository_quote",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_booking_bookingrepository_quote",
+      "_tgt": "backend_app_booking_py_objectid"
+    },
+    {
+      "source": "backend_app_booking_py_objectid",
+      "target": "backend_app_booking_object_id",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L127",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_booking_object_id",
+      "_tgt": "backend_app_booking_py_objectid"
+    },
+    {
+      "source": "backend_app_booking_py_post",
+      "target": "backend_app_booking_create_quote",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L135",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_app_booking_create_quote",
+      "_tgt": "backend_app_booking_py_post"
+    },
+    {
+      "source": "backend_app_booking_py_post",
+      "target": "backend_app_booking_create_ride",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L141",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_app_booking_create_ride",
+      "_tgt": "backend_app_booking_py_post"
+    },
+    {
+      "source": "backend_app_booking_py_request",
+      "target": "backend_app_booking_create_ride",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L142",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_booking_create_ride",
+      "_tgt": "backend_app_booking_py_request"
+    },
+    {
+      "source": "backend_app_booking_py_request",
+      "target": "backend_app_booking_get_ride",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L161",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_booking_get_ride",
+      "_tgt": "backend_app_booking_py_request"
+    },
+    {
+      "source": "backend_app_booking_py_depends",
+      "target": "backend_app_booking_create_ride",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L142",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_booking_create_ride",
+      "_tgt": "backend_app_booking_py_depends"
+    },
+    {
+      "source": "backend_app_booking_py_depends",
+      "target": "backend_app_booking_get_ride",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L161",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_booking_get_ride",
+      "_tgt": "backend_app_booking_py_depends"
+    },
+    {
+      "source": "backend_app_booking_py_get",
+      "target": "backend_app_booking_get_ride",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/booking.py",
+      "source_location": "L160",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_app_booking_get_ride",
+      "_tgt": "backend_app_booking_py_get"
     },
     {
       "source": "backend_app_core_py_request",
@@ -8860,8 +11386,8 @@
       "source_location": "L64",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_core_current_user",
-      "_tgt": "any"
+      "_src": "any",
+      "_tgt": "backend_app_core_current_user"
     },
     {
       "source": "any",
@@ -8873,8 +11399,8 @@
       "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_core_identityrepository_create_session",
-      "_tgt": "any"
+      "_src": "any",
+      "_tgt": "backend_app_core_identityrepository_create_session"
     },
     {
       "source": "any",
@@ -8886,8 +11412,8 @@
       "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_core_identityrepository_profile_for_token",
-      "_tgt": "any"
+      "_src": "any",
+      "_tgt": "backend_app_core_identityrepository_profile_for_token"
     },
     {
       "source": "any",
@@ -8899,8 +11425,8 @@
       "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_core_identityrepository_update_profile",
-      "_tgt": "any"
+      "_src": "any",
+      "_tgt": "backend_app_core_identityrepository_update_profile"
     },
     {
       "source": "backend_app_core_current_user",
@@ -8954,8 +11480,8 @@
       "source_location": "L134",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_locations_delete_place",
-      "_tgt": "backend_app_core_current_user"
+      "_src": "backend_app_core_current_user",
+      "_tgt": "backend_app_locations_delete_place"
     },
     {
       "source": "backend_app_core_current_user",
@@ -8967,8 +11493,8 @@
       "source_location": "L128",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_locations_save_place",
-      "_tgt": "backend_app_core_current_user"
+      "_src": "backend_app_core_current_user",
+      "_tgt": "backend_app_locations_save_place"
     },
     {
       "source": "backend_app_core_current_user",
@@ -8980,8 +11506,8 @@
       "source_location": "L121",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_locations_saved",
-      "_tgt": "backend_app_core_current_user"
+      "_src": "backend_app_core_current_user",
+      "_tgt": "backend_app_locations_saved"
     },
     {
       "source": "backend_app_identity_phonerequest",
@@ -9091,6 +11617,58 @@
       "_tgt": "backend_app_identity_update_profile"
     },
     {
+      "source": "backend_app_identity_py_post",
+      "target": "backend_app_identity_fast_entry",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/identity.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_app_identity_fast_entry",
+      "_tgt": "backend_app_identity_py_post"
+    },
+    {
+      "source": "backend_app_identity_py_post",
+      "target": "backend_app_identity_logout",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/identity.py",
+      "source_location": "L130",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_app_identity_logout",
+      "_tgt": "backend_app_identity_py_post"
+    },
+    {
+      "source": "backend_app_identity_py_post",
+      "target": "backend_app_identity_start_phone",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/identity.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_app_identity_start_phone",
+      "_tgt": "backend_app_identity_py_post"
+    },
+    {
+      "source": "backend_app_identity_py_post",
+      "target": "backend_app_identity_verify_phone",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/identity.py",
+      "source_location": "L97",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_app_identity_verify_phone",
+      "_tgt": "backend_app_identity_py_post"
+    },
+    {
       "source": "backend_app_identity_py_request",
       "target": "backend_app_identity_fast_entry",
       "relation": "references",
@@ -9126,8 +11704,8 @@
       "source_location": "L122",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_identity_update_profile",
-      "_tgt": "backend_app_identity_py_request"
+      "_src": "backend_app_identity_py_request",
+      "_tgt": "backend_app_identity_update_profile"
     },
     {
       "source": "backend_app_identity_py_request",
@@ -9139,8 +11717,8 @@
       "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_identity_verify_phone",
-      "_tgt": "backend_app_identity_py_request"
+      "_src": "backend_app_identity_py_request",
+      "_tgt": "backend_app_identity_verify_phone"
     },
     {
       "source": "backend_app_identity_py_get",
@@ -9178,8 +11756,8 @@
       "source_location": "L122",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_identity_update_profile",
-      "_tgt": "backend_app_identity_py_depends"
+      "_src": "backend_app_identity_py_depends",
+      "_tgt": "backend_app_identity_update_profile"
     },
     {
       "source": "backend_app_identity_py_put",
@@ -9191,8 +11769,8 @@
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
-      "_src": "backend_app_identity_update_profile",
-      "_tgt": "backend_app_identity_py_put"
+      "_src": "backend_app_identity_py_put",
+      "_tgt": "backend_app_identity_update_profile"
     },
     {
       "source": "backend_app_locations_savedinput",
@@ -9217,8 +11795,8 @@
       "source_location": "L95",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_locations_savedrepository_save",
-      "_tgt": "backend_app_locations_savedinput"
+      "_src": "backend_app_locations_savedinput",
+      "_tgt": "backend_app_locations_savedrepository_save"
     },
     {
       "source": "backend_app_locations_savedplace",
@@ -9234,6 +11812,32 @@
       "_tgt": "backend_app_locations_savedplace"
     },
     {
+      "source": "backend_app_locations_py_objectid",
+      "target": "backend_app_locations_savedrepository_delete",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/locations.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_locations_savedrepository_delete",
+      "_tgt": "backend_app_locations_py_objectid"
+    },
+    {
+      "source": "backend_app_locations_py_objectid",
+      "target": "backend_app_locations_savedrepository_save",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/app/locations.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_origin": "ast",
+      "_src": "backend_app_locations_savedrepository_save",
+      "_tgt": "backend_app_locations_py_objectid"
+    },
+    {
       "source": "backend_app_locations_py_get",
       "target": "backend_app_locations_saved",
       "relation": "references",
@@ -9243,8 +11847,8 @@
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
-      "_src": "backend_app_locations_saved",
-      "_tgt": "backend_app_locations_py_get"
+      "_src": "backend_app_locations_py_get",
+      "_tgt": "backend_app_locations_saved"
     },
     {
       "source": "backend_app_locations_py_get",
@@ -9256,8 +11860,8 @@
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
-      "_src": "backend_app_locations_search",
-      "_tgt": "backend_app_locations_py_get"
+      "_src": "backend_app_locations_py_get",
+      "_tgt": "backend_app_locations_search"
     },
     {
       "source": "query",
@@ -9321,8 +11925,8 @@
       "source_location": "L128",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_locations_save_place",
-      "_tgt": "backend_app_locations_py_request"
+      "_src": "backend_app_locations_py_request",
+      "_tgt": "backend_app_locations_save_place"
     },
     {
       "source": "backend_app_locations_py_depends",
@@ -9347,8 +11951,8 @@
       "source_location": "L128",
       "weight": 1.0,
       "_origin": "ast",
-      "_src": "backend_app_locations_save_place",
-      "_tgt": "backend_app_locations_py_depends"
+      "_src": "backend_app_locations_py_depends",
+      "_tgt": "backend_app_locations_save_place"
     },
     {
       "source": "backend_app_locations_py_put",
@@ -9360,8 +11964,8 @@
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
-      "_src": "backend_app_locations_save_place",
-      "_tgt": "backend_app_locations_py_put"
+      "_src": "backend_app_locations_py_put",
+      "_tgt": "backend_app_locations_save_place"
     },
     {
       "source": "delete",
@@ -9375,6 +11979,19 @@
       "_origin": "ast",
       "_src": "backend_app_locations_delete_place",
       "_tgt": "delete"
+    },
+    {
+      "source": "backend_tests_test_booking_py_fixture",
+      "target": "backend_tests_test_booking_client",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/tests/test_booking.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "_src": "backend_tests_test_booking_client",
+      "_tgt": "backend_tests_test_booking_py_fixture"
     },
     {
       "source": "backend_tests_test_identity_py_fixture",
@@ -9417,10 +12034,10 @@
     }
   ],
   "metadata": {
-    "built_at": "2026-11-19T09:59:07.661681+00:00",
+    "built_at": "2026-11-19T10:05:17.492061+00:00",
     "version": "graph_update-v1",
     "codebase_root": "C:\\artifacts-v2\\T0132PcJVCRTV000419112609083214\\developer",
     "force": true,
-    "files_scanned": 27
+    "files_scanned": 32
   }
 }

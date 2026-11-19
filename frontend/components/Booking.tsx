@@ -17,9 +17,9 @@ const icons: Record<string, string> = {bike: '◉', auto: '▰', ubergo: '▱', 
 const rupees = (value: number) => `₹${value.toFixed(2)}`;
 
 /** Compare server fares and create a simulated booking for one destination. */
-export default function Booking({ token, destination, onBack }: { token: string; destination: Location; onBack: () => void }) {
+export default function Booking({ token, destination, onBack, pickup: start = pickup, initialVehicle = 'bike' }: { token: string; destination: Location; onBack: () => void; pickup?: Location; initialVehicle?: 'bike' | 'parcel' }) {
   const [quote, setQuote] = useState<Quote | null>(null);
-  const [vehicle, setVehicle] = useState('bike');
+  const [vehicle, setVehicle] = useState<string>(initialVehicle);
   const [payment, setPayment] = useState('cash');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
@@ -32,12 +32,12 @@ export default function Booking({ token, destination, onBack }: { token: string;
   useEffect(() => {
     let active = true;
     setLoading(true); setQuote(null); setError('');
-    api<Quote>('/quotes', {method: 'POST', body: JSON.stringify({pickup, destination})}, token, 'booking')
+    api<Quote>('/quotes', {method: 'POST', body: JSON.stringify({pickup: start, destination})}, token, 'booking')
       .then(result => { if (active) setQuote(result); })
       .catch((e: Error) => { if (active) setError(e.message); })
       .finally(() => { if (active) setLoading(false); });
     return () => { active = false; };
-  }, [destination, token, retry]);
+  }, [destination, token, retry, start]);
 
   async function confirm() {
     if (!quote || processing) return;
@@ -70,7 +70,7 @@ export default function Booking({ token, destination, onBack }: { token: string;
   return <section className="booking-panel" aria-labelledby="booking-title">
     <button className="text-button" onClick={onBack} disabled={processing}>← Change destination</button>
     <div className="card-kicker">YOUR SIMULATED RIDE</div><h1 id="booking-title">Choose a ride</h1>
-    <p><strong>From:</strong> {pickup.name}<br/><strong>To:</strong> {destination.name}</p>
+    <p><strong>From:</strong> {start.name}<br/><strong>To:</strong> {destination.name}</p>
     {loading && <p role="status">Getting your estimate…</p>}
     {error && <div className="alert" role="alert">{error} {!quote && <button onClick={() => setRetry(n => n + 1)}>Retry estimate</button>}</div>}
     {quote && <>

@@ -2,7 +2,8 @@
 
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import type * as Leaflet from 'leaflet';
-import { api, type RideBooking, type TrackingState } from '../lib/api';
+import { api, type Feedback, type Receipt, type RideBooking, type TrackingState } from '../lib/api';
+import FeedbackForm from './FeedbackForm';
 
 const symbols: Record<string, string> = {
   bike: '<circle cx="5" cy="18" r="3"/><circle cx="19" cy="18" r="3"/><path d="M5 18l5-8 4 8H5m5-8h5l4 8m-6-11h3"/>',
@@ -31,8 +32,15 @@ function TrackingMap({ tracking }: { tracking: TrackingState }) {
       const b: [number, number] = [destination.lat, destination.lng];
       const instance = L.map(container.current, {zoomControl: false}).fitBounds([a, b], {padding: [25, 25], maxZoom: 14});
       map.current = instance;
-      const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      L.tileLayer(dark ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png' : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; OpenStreetMap contributors', maxZoom: 19}).addTo(instance);
+      const dark = document.documentElement.dataset.theme === 'dark';
+      const tiles = L.tileLayer(dark ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png' : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; OpenStreetMap contributors', maxZoom: 19}).addTo(instance);
+      const updateTheme = () => tiles.setUrl(document.documentElement.dataset.theme === 'dark' ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png' : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+      window.addEventListener('ridenow-resolved-theme', updateTheme);
+      instance.once('unload', () => window.removeEventListener('ridenow-resolved-theme', updateTheme));
+      if (!L.Browser.svg) {
+        if (container.current) container.current.setAttribute('aria-label', 'Route map unavailable; journey status remains available');
+        return;
+      }
       L.polyline([a, b], {color: '#1672ee', weight: 4}).addTo(instance);
       L.circleMarker(a, {radius: 6, color: '#1672ee'}).addTo(instance).bindTooltip('Pickup');
       L.circleMarker(b, {radius: 6, color: '#111'}).addTo(instance).bindTooltip('Destination');
@@ -63,6 +71,10 @@ export default function Tracking({ token, booking, onBack }: { token: string; bo
   const [panel, setPanel] = useState<'call' | 'chat' | 'safety' | null>(null);
   const [notice, setNotice] = useState('');
   const [rideCheck, setRideCheck] = useState(false);
+  const [feedback, setFeedback] = useState<Feedback | null>(null);
+  const [feedbackLoaded, setFeedbackLoaded] = useState(false);
+  const [feedbackError, setFeedbackError] = useState('');
+  const [feedbackRetry, setFeedbackRetry] = useState(0);
   const busyRef = useRef(false);
   const generation = useRef(0);
   const refreshSequence = useRef(0);
@@ -75,6 +87,14 @@ export default function Tracking({ token, booking, onBack }: { token: string; bo
     } catch (e) { if (requestGeneration === generation.current && sequence === refreshSequence.current) setError(e instanceof Error ? e.message : 'Tracking unavailable.'); }
   }, [booking.id, token]);
   useEffect(() => { void refresh(); const timer = window.setInterval(() => void refresh(), 1000); return () => window.clearInterval(timer); }, [refresh]);
+  useEffect(() => {
+    if (tracking?.state !== 'completed' && tracking?.state !== 'delivered') return;
+    let active = true;
+    api<Receipt>(`/history/${booking.id}`, {}, token, 'activity')
+      .then(receipt => { if (active) { setFeedback(receipt.feedback); setFeedbackLoaded(true); setFeedbackError(''); } })
+      .catch(e => { if (active) setFeedbackError(e instanceof Error ? e.message : 'Could not load feedback.'); });
+    return () => { active = false; };
+  }, [tracking?.state, booking.id, token, feedbackRetry]);
   useEffect(() => {
     if (tracking?.state !== 'in_trip' && tracking?.state !== 'transit') return;
     const timer = window.setInterval(() => setRideCheck(true), 15000);
@@ -111,7 +131,7 @@ export default function Tracking({ token, booking, onBack }: { token: string; bo
         {panel === 'chat' && <div className="notice"><p>Mock chat · no message is sent.</p>{["I'm at the pickup point", 'Be right there'].map(message => <button key={message} onClick={() => setNotice(`Simulated message: ${message} · Driver: Thanks, see you soon.`)}>{message}</button>)} <button onClick={() => setPanel(null)}>Close chat</button></div>}
         {panel === 'safety' && <div className="notice"><strong>Safety simulation</strong><p>Simulated SOS 112 · no emergency service will be contacted.</p><p>Simulated GPS: {(booking.pickup.lat + (booking.destination.lat - booking.pickup.lat) * tracking.progress).toFixed(5)}, {(booking.pickup.lng + (booking.destination.lng - booking.pickup.lng) * tracking.progress).toFixed(5)} · {tracking.driver?.plate || 'Awaiting driver'}</p><button onClick={() => setNotice('SOS simulation only: no emergency service was contacted.')}>Simulate SOS</button> <button onClick={() => void share()}>Share Trip</button> <button onClick={() => setPanel(null)}>Close safety</button></div>}
         {rideCheck && <div className="notice"><p>Everything okay on your trip? (Simulated RideCheck)</p><button onClick={() => {setRideCheck(false); setNotice('RideCheck acknowledged.');}}>Yes, I’m okay</button> <button onClick={() => {setRideCheck(false); setPanel('safety');}}>Open safety</button></div>}</>}
-      {notice && <p role="status">{notice}</p>}{terminal && <button className="primary" onClick={onBack}>Choose another destination</button>}
+      {notice && <p role="status">{notice}</p>}{terminal && <>{tracking.state !== 'cancelled' && <>{feedbackError && <p role="alert">{feedbackError} <button onClick={() => setFeedbackRetry(n => n + 1)}>Retry feedback</button></p>}{feedbackLoaded ? <FeedbackForm token={token} rideId={booking.id} initial={feedback} onSaved={setFeedback} /> : !feedbackError && <p role="status">Loading feedback…</p>}<a href="/activity">View receipt and leave feedback</a></>}<button className="primary" onClick={onBack}>Choose another destination</button></>}
     </>}
   </section>;
 }
